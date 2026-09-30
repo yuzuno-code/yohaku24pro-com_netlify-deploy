@@ -1,0 +1,1808 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="assets/js/viewport.js"></script>
+    <title>「ヨハク」を作る業務代行×コンサル秘書 🍤 | あなたの事業パートナー</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="yohaku-favicon.png" />
+
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ヨハク" />
+    <meta property="og:title" content="「ヨハク」を作る業務代行×コンサル秘書 | あなたの事業パートナー" />
+    <meta property="og:description" content="AIを使いこなして、ヒアリングから実装まで全部お任せ。フリーランス・個人事業主の業務代行×コンサル秘書サービスです。" />
+    <meta property="og:url" content="https://yohaku24pro.com/" />
+    <meta property="og:image" content="https://yohaku24pro.com/assets/img/yohaku24pro-com_ogp.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;500;600;700;900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <!-- ========================================
+           ナビゲーション
+           ======================================== -->
+      <header class="l-header">
+        <nav class="c-nav">
+          <!-- ロゴ -->
+          <a href="/" class="c-nav__logo">
+            <img src="assets/img/yohaku-logo_transparent.png" alt="ヨハク" class="c-nav__logo-img" />
+            <div>
+              <span class="c-nav__logo-name">ヨハク</span>
+              <span class="c-nav__logo-sub">YOHAKU SECRETARY</span>
+            </div>
+          </a>
+
+          <!-- ナビリンク + CTA -->
+          <div class="c-nav__links">
+            <div class="c-nav__links-inner">
+              <a href="#services" class="c-nav__link">サービス</a>
+              <a href="#pricing" class="c-nav__link">料金</a>
+              <a href="#strengths" class="c-nav__link">強み</a>
+              <a href="#flow" class="c-nav__link">ご利用の流れ</a>
+              <a href="#profile" class="c-nav__link">秘書について</a>
+              <a href="#faq" class="c-nav__link">Q&amp;A</a>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdGwQPf6zybCpuXeVpWJPe9eecjuu7wf8wFoXV_9FfMqV7caw/viewform"
+              target="_blank"
+              rel="noopener"
+              class="c-nav__cta"
+              >相談する →</a
+            >
+          </div>
+
+          <!-- ハンバーガーボタン（SP用） -->
+          <button class="c-nav__hamburger js-hamburger" aria-label="メニューを開く" aria-expanded="false">
+            <span class="c-nav__hamburger-line" aria-hidden="true"></span>
+            <span class="c-nav__hamburger-line" aria-hidden="true"></span>
+            <span class="c-nav__hamburger-line" aria-hidden="true"></span>
+          </button>
+        </nav>
+      </header>
+
+      <main>
+        <!-- ========================================
+             Hero
+             ======================================== -->
+        <section class="p-hero">
+          <!-- 背景装飾ブロブ -->
+          <div class="p-hero__blob p-hero__blob--right" aria-hidden="true"></div>
+          <div class="p-hero__blob p-hero__blob--left" aria-hidden="true"></div>
+
+          <!-- グリッドレイアウト -->
+          <div class="p-hero__inner">
+            <!-- テキスト上部：kicker・タイトル -->
+            <div class="p-hero__content-top">
+              <!-- キッカー -->
+              <div class="p-hero__kicker">
+                <span class="p-hero__kicker-line" aria-hidden="true"></span>
+                <span class="p-hero__kicker-text">For Freelancers &amp; Sole Proprietors</span>
+              </div>
+
+              <!-- メインタイトル -->
+              <h1 class="p-hero__title">
+                <span class="p-hero__title-line">あなたの時間に、</span>
+                <span class="p-hero__title-line">
+                  <span class="p-hero__title-accent"
+                    ><span class="p-hero__title-accent-text">「ヨハク」</span
+                    ><span class="p-hero__title-accent-glow" aria-hidden="true"></span></span
+                  >を作る
+                </span>
+                <span class="p-hero__title-sub"> 業務代行<span class="p-hero__title-cross">×</span>コンサル秘書 </span>
+              </h1>
+            </div>
+            <!-- /.p-hero__content-top -->
+
+            <!-- 秘書イラスト（SP: タイトル直後 / mid: 右列 / PC: absolute） -->
+            <div class="p-hero__portrait" aria-hidden="true">
+              <div class="p-hero__portrait-glow"></div>
+              <img src="assets/img/ribe-icon.png" alt="" width="1080" height="1080" class="p-hero__portrait-img" />
+            </div>
+
+            <div class="p-hero__content-main">
+              <!-- リードコピー -->
+              <p class="p-hero__lead">
+                AIを使いこなして、<br />
+                ヒアリングから実装まで全部お任せ 🍤
+              </p>
+
+              <!-- サービスタグ -->
+              <ul class="p-hero__service-tags">
+                <li class="p-hero__service-tag">事務・経理</li>
+                <li class="p-hero__service-tag">デザイン</li>
+                <li class="p-hero__service-tag">HP制作</li>
+                <li class="p-hero__service-tag">業務ツール構築</li>
+              </ul>
+
+              <!-- ボディコピー（結果文のみ） -->
+              <p class="p-hero__body">
+                AIを活用した高速アウトプットと、先回りの提案力で、<br />あなたが<u class="p-hero__underline"
+                  >本業に集中できるゆとり</u
+                >を生み出します。
+              </p>
+
+              <!-- CTAボタン -->
+              <div class="p-hero__cta">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdGwQPf6zybCpuXeVpWJPe9eecjuu7wf8wFoXV_9FfMqV7caw/viewform"
+                  target="_blank"
+                  rel="noopener"
+                  class="c-button c-button--fill c-button--lift"
+                >
+                  無料で相談する
+                  <span class="c-button__arrow" aria-hidden="true">→</span>
+                </a>
+                <button type="button" class="c-button c-button--outline js-scroll-to" data-target="services">
+                  サービスを見る
+                </button>
+              </div>
+            </div>
+            <!-- /.p-hero__content-main -->
+          <!-- スクロールインジケーター -->
+          <div class="p-hero__scroll" aria-hidden="true">
+            <span class="p-hero__scroll-label">SCROLL</span>
+            <div class="p-hero__scroll-bar">
+              <div class="p-hero__scroll-dot"></div>
+            </div>
+          </div>
+          </div>
+          <!-- /.p-hero__inner -->
+
+          <!-- 右外：縦書き装飾 -->
+          <div class="p-hero__aside" aria-hidden="true">
+            <span class="c-tate-badge">余白を作る、という仕事。</span>
+            <div class="p-hero__aside-line"></div>
+            <span class="p-hero__aside-year">EST. 2024 / ONLINE</span>
+          </div>
+        </section>
+        <!-- /.p-hero -->
+
+        <!-- StatsStrip -->
+        <section class="p-stats">
+          <div class="p-stats__inner">
+            <p class="p-stats__lead">
+              法人から個人まで、今まで<strong class="p-stats__lead-accent">幅広い業種・業態</strong
+              >の事業者さまと伴走してきました。
+            </p>
+            <div class="p-stats__grid">
+              <button type="button" class="p-stats__item js-scroll-to js-reveal" data-target="tools">
+                <div class="p-stats__num">10+</div>
+                <div class="p-stats__label">対応ツール数</div>
+                <div class="p-stats__sub"><span>TOOLS</span><span class="p-stats__arrow">→</span></div>
+              </button>
+              <button type="button" class="p-stats__item js-scroll-to js-reveal" data-target="tools">
+                <div class="p-stats__num">5+</div>
+                <div class="p-stats__label">AI活用ツール</div>
+                <div class="p-stats__sub"><span>AI MODELS</span><span class="p-stats__arrow">→</span></div>
+              </button>
+              <button type="button" class="p-stats__item js-scroll-to js-reveal" data-target="services">
+                <div class="p-stats__num">6+</div>
+                <div class="p-stats__label">提供サービス</div>
+                <div class="p-stats__sub"><span>SERVICES</span><span class="p-stats__arrow">→</span></div>
+              </button>
+              <button type="button" class="p-stats__item js-scroll-to js-reveal" data-target="pricing-spot">
+                <div class="p-stats__num">¥3,000〜</div>
+                <div class="p-stats__label">スポット作業</div>
+                <div class="p-stats__sub"><span>SPOT WORK</span><span class="p-stats__arrow">→</span></div>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Problems -->
+        <section id="problems" class="p-problems">
+          <div class="p-problems__inner">
+            <div class="c-section-tag">
+              <span class="c-section-tag__num">01</span>
+              <span class="c-section-tag__line"></span>
+              <span class="c-section-tag__text">Problems</span>
+            </div>
+
+            <h2 class="p-problems__title">
+              こんな<span class="p-problems__title-accent">お悩み</span>、<br />
+              ありませんか？
+            </h2>
+
+            <div class="p-problems__grid">
+              <!-- 01 多忙 -->
+              <article class="p-problems__card js-reveal">
+                <div class="p-problems__card-icon">
+                  <svg viewBox="0 0 80 80" width="72" height="72">
+                    <path d="M8 58 L72 58" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+                    <path
+                      d="M12 58 L16 72 M68 58 L64 72"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                    />
+                    <rect x="18" y="40" width="26" height="18" fill="#f6efe2" stroke="currentColor" stroke-width="2" />
+                    <rect x="24" y="32" width="26" height="18" fill="#fff" stroke="currentColor" stroke-width="2" />
+                    <rect x="30" y="24" width="26" height="18" fill="#f2a57f" stroke="currentColor" stroke-width="2" />
+                    <path
+                      d="M34 30 L50 30 M34 34 L46 34 M34 38 L50 38"
+                      stroke="#c4522a"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                    />
+                    <circle cx="60" cy="50" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path
+                      d="M60 46 L60 50 L64 52"
+                      stroke="#e16a3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      fill="none"
+                    />
+                    <path
+                      d="M14 22 L10 18 M18 16 L16 10 M26 14 L26 8"
+                      stroke="#e16a3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="p-problems__card-tag">多忙</div>
+                <p class="p-problems__card-text">事務作業に追われて、本業に集中できない</p>
+              </article>
+
+              <!-- 02 時間不足 -->
+              <article class="p-problems__card js-reveal">
+                <div class="p-problems__card-icon">
+                  <svg viewBox="0 0 80 80" width="72" height="72">
+                    <rect
+                      x="22"
+                      y="12"
+                      width="36"
+                      height="56"
+                      rx="6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                    />
+                    <rect
+                      x="27"
+                      y="20"
+                      width="26"
+                      height="36"
+                      fill="#f6efe2"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                    />
+                    <path
+                      d="M40 30 C 36 26, 30 28, 30 34 C 30 40, 40 46, 40 46 C 40 46, 50 40, 50 34 C 50 28, 44 26, 40 30 Z"
+                      fill="#e16a3a"
+                      stroke="#c4522a"
+                      stroke-width="1.4"
+                    />
+                    <path
+                      d="M66 20 C 64 18, 60 19, 60 22 C 60 25, 66 28, 66 28 C 66 28, 72 25, 72 22 C 72 19, 68 18, 66 20 Z"
+                      fill="none"
+                      stroke="#e16a3a"
+                      stroke-width="1.6"
+                    />
+                    <circle cx="14" cy="34" r="3" fill="none" stroke="#e16a3a" stroke-width="1.6" />
+                    <circle cx="62" cy="60" r="6" fill="#f6efe2" stroke="currentColor" stroke-width="1.8" />
+                    <path
+                      d="M62 57 L62 60 L65 62"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <div class="p-problems__card-tag">時間不足</div>
+                <p class="p-problems__card-text">SNSを運用したいけど、時間が足りない</p>
+              </article>
+
+              <!-- 03 経理滞留 -->
+              <article class="p-problems__card js-reveal">
+                <div class="p-problems__card-icon">
+                  <svg viewBox="0 0 80 80" width="72" height="72">
+                    <rect
+                      x="18"
+                      y="18"
+                      width="36"
+                      height="48"
+                      fill="#f6efe2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="rotate(-6 36 42)"
+                    />
+                    <rect x="22" y="16" width="36" height="48" fill="#fff" stroke="currentColor" stroke-width="2" />
+                    <path
+                      d="M28 26 L50 26 M28 32 L52 32 M28 38 L46 38 M28 44 L52 44 M28 50 L42 50"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                    />
+                    <circle cx="56" cy="58" r="10" fill="#e16a3a" />
+                    <path
+                      d="M52 55 L56 59 L60 55 M53 60 L59 60 M53 62.5 L59 62.5 M56 59 L56 63.5"
+                      stroke="#fff"
+                      stroke-width="1.6"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M10 66 L14 66 M10 70 L16 70"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                      opacity="0.5"
+                    />
+                  </svg>
+                </div>
+                <div class="p-problems__card-tag">経理滞留</div>
+                <p class="p-problems__card-text">請求書や記帳が溜まって後回しになっている</p>
+              </article>
+
+              <!-- 04 相談したい -->
+              <article class="p-problems__card js-reveal">
+                <div class="p-problems__card-icon">
+                  <svg viewBox="0 0 80 80" width="72" height="72">
+                    <circle cx="32" cy="34" r="14" fill="#f6efe2" stroke="currentColor" stroke-width="2" />
+                    <circle cx="28" cy="32" r="1.4" fill="currentColor" />
+                    <circle cx="36" cy="32" r="1.4" fill="currentColor" />
+                    <path
+                      d="M28 40 C 30 38, 34 38, 36 40"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M18 66 C 22 54, 42 54, 46 66"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M56 24 C 56 18, 66 18, 66 24 C 66 28, 61 28, 61 32 M61 36 L61 36.1"
+                      stroke="#e16a3a"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M50 46 C 50 43, 55 43, 55 46 C 55 48, 52 48, 52 50"
+                      stroke="#e16a3a"
+                      stroke-width="1.6"
+                      fill="none"
+                      stroke-linecap="round"
+                      opacity="0.6"
+                    />
+                  </svg>
+                </div>
+                <div class="p-problems__card-tag">相談したい</div>
+                <p class="p-problems__card-text">誰かに頼みたいけど、何を頼めばいいかわからない</p>
+              </article>
+            </div>
+            <!-- /.p-problems__grid -->
+
+            <!-- クロージャー -->
+            <div class="p-problems__closer">
+              <p class="p-problems__closer-sub">LEAVE IT TO US</p>
+              <p class="p-problems__closer-title">
+                ぜんぶ、<br><span class="p-problems__closer-accent">私にお任せください</span>
+              </p>
+              <p class="p-problems__closer-body">
+                あなたは、本業と大切な人のために時間を使ってください。<br />
+                事務も、経理も、SNSも——すべて、責任を持って仕上げます。
+              </p>
+            </div>
+          </div>
+          <!-- /.p-problems__inner -->
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="p-services">
+          <div class="p-services__inner">
+            <div class="c-section-tag">
+              <span class="c-section-tag__num">02</span>
+              <span class="c-section-tag__line"></span>
+              <span class="c-section-tag__text">Services</span>
+            </div>
+
+            <div class="p-services__header">
+              <h2 class="p-services__title">提供<span class="p-services__title-accent">サービス</span></h2>
+              <p class="p-services__lead">
+                幅広い業務に対応しています。<br />
+                必要なものだけ、必要な分だけ、ご依頼いただけます。
+              </p>
+            </div>
+
+            <div class="p-services__grid">
+              <!-- 01 HP・LP制作 -->
+              <article class="p-services__card js-reveal">
+                <div class="p-services__card-blob" aria-hidden="true"></div>
+                <div class="p-services__card-icon">
+                  <svg viewBox="0 0 80 80" width="64" height="64">
+                    <rect
+                      x="10"
+                      y="14"
+                      width="60"
+                      height="44"
+                      rx="3"
+                      fill="#f6efe2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path d="M10 24 L70 24" stroke="currentColor" stroke-width="2" />
+                    <circle cx="16" cy="19" r="1.6" fill="#e16a3a" />
+                    <circle cx="22" cy="19" r="1.6" fill="#c5a978" />
+                    <circle cx="28" cy="19" r="1.6" fill="#8a9669" />
+                    <rect x="16" y="30" width="22" height="10" fill="#e16a3a" opacity="0.85" />
+                    <rect x="42" y="30" width="22" height="10" fill="currentColor" opacity="0.18" />
+                    <rect x="16" y="44" width="48" height="3" fill="currentColor" opacity="0.25" />
+                    <rect x="16" y="50" width="34" height="3" fill="currentColor" opacity="0.18" />
+                    <path d="M64 62 L64 70 M60 66 L68 66" stroke="#e16a3a" stroke-width="1.6" stroke-linecap="round" />
+                    <circle cx="14" cy="64" r="2" fill="#e16a3a" opacity="0.6" />
+                  </svg>
+                </div>
+                <h3 class="p-services__card-title">HP・LP制作</h3>
+                <p class="p-services__card-desc">
+                  Claude
+                  Designを活用し、プロンプトから素早くデザインを生成。お店や事業の世界観に合わせた、伝わるホームページ・ランディングページをお届けします。
+                </p>
+                <div class="p-services__card-tags">
+                  <span class="p-services__card-tag">Claude Design</span>
+                  <span class="p-services__card-tag">HP制作</span>
+                  <span class="p-services__card-tag">LP制作</span>
+                  <span class="p-services__card-tag">プロンプト設計</span>
+                  <span class="p-services__card-tag">更新サポート</span>
+                </div>
+              </article>
+
+              <!-- 02 業務ツール構築 -->
+              <article class="p-services__card js-reveal">
+                <div class="p-services__card-blob" aria-hidden="true"></div>
+                <div class="p-services__card-icon">
+                  <svg viewBox="0 0 80 80" width="64" height="64">
+                    <rect
+                      x="12"
+                      y="14"
+                      width="56"
+                      height="52"
+                      rx="3"
+                      fill="#f6efe2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path d="M12 24 L68 24" stroke="currentColor" stroke-width="2" />
+                    <circle cx="18" cy="19" r="1.6" fill="#e16a3a" />
+                    <path
+                      d="M24 36 L18 44 L24 52"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M56 36 L62 44 L56 52"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M44 32 L36 56" stroke="#e16a3a" stroke-width="2.2" stroke-linecap="round" />
+                    <rect x="22" y="58" width="36" height="4" fill="currentColor" opacity="0.18" />
+                  </svg>
+                </div>
+                <h3 class="p-services__card-title">業務ツール構築</h3>
+                <p class="p-services__card-desc">
+                  Claude
+                  Codeを活用して、お問い合わせフォーム・ヒアリングシート・社内ツールなどを構築。「あったらいいな」を形にします。
+                </p>
+                <div class="p-services__card-tags">
+                  <span class="p-services__card-tag">Claude Code</span>
+                  <span class="p-services__card-tag">問合せフォーム</span>
+                  <span class="p-services__card-tag">ヒアリングシート</span>
+                  <span class="p-services__card-tag">業務ツール</span>
+                  <span class="p-services__card-tag">自動化</span>
+                </div>
+              </article>
+
+              <!-- 03 デザイン制作 -->
+              <article class="p-services__card js-reveal">
+                <div class="p-services__card-blob" aria-hidden="true"></div>
+                <div class="p-services__card-icon">
+                  <svg viewBox="0 0 80 80" width="64" height="64">
+                    <rect x="14" y="14" width="40" height="52" fill="#f6efe2" stroke="currentColor" stroke-width="2" />
+                    <path
+                      d="M20 26 L42 26 M20 32 L48 32 M20 38 L38 38"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                    />
+                    <rect x="20" y="46" width="18" height="14" fill="#e16a3a" stroke="#c4522a" stroke-width="1.4" />
+                    <path
+                      d="M60 14 L68 22 L44 46 L38 48 L40 42 Z"
+                      fill="#e8dcc3"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M60 14 L64 10 L68 14 L68 22 Z"
+                      fill="#6b7a4e"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="p-services__card-title">デザイン制作</h3>
+                <p class="p-services__card-desc">
+                  チラシ・名刺・プレゼン資料・バナーなど。Canvaを活用した、伝わるデザインをお届けします。
+                </p>
+                <div class="p-services__card-tags">
+                  <span class="p-services__card-tag">チラシ</span>
+                  <span class="p-services__card-tag">名刺</span>
+                  <span class="p-services__card-tag">プレゼン資料</span>
+                  <span class="p-services__card-tag">バナー</span>
+                  <span class="p-services__card-tag">サムネ</span>
+                </div>
+              </article>
+
+              <!-- 04 経理・記帳代行 -->
+              <article class="p-services__card js-reveal">
+                <div class="p-services__card-blob" aria-hidden="true"></div>
+                <div class="p-services__card-icon">
+                  <svg viewBox="0 0 80 80" width="64" height="64">
+                    <path
+                      d="M14 18 L40 14 L40 62 L14 66 Z"
+                      fill="#f6efe2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M40 14 L66 18 L66 66 L40 62 Z"
+                      fill="#fff"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20 26 L34 24 M20 32 L34 30 M20 38 L32 36 M46 26 L60 28 M46 32 L60 34 M46 38 L58 40"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                    />
+                    <circle cx="52" cy="50" r="8" fill="#e16a3a" />
+                    <path
+                      d="M48 47 L52 51 L56 47 M49 52 L55 52 M49 55 L55 55 M52 51 L52 56"
+                      stroke="#fff"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <h3 class="p-services__card-title">経理・記帳代行</h3>
+                <p class="p-services__card-desc">
+                  マネーフォワード・Freeeを使った記帳代行、請求書作成。毎月の経理業務をお任せください。
+                </p>
+                <div class="p-services__card-tags">
+                  <span class="p-services__card-tag">記帳代行</span>
+                  <span class="p-services__card-tag">請求書作成</span>
+                  <span class="p-services__card-tag">MF</span>
+                  <span class="p-services__card-tag">Freee</span>
+                  <span class="p-services__card-tag">月次レポート</span>
+                </div>
+              </article>
+
+              <!-- 05 庶務・秘書業務 -->
+              <article class="p-services__card js-reveal">
+                <div class="p-services__card-blob" aria-hidden="true"></div>
+                <div class="p-services__card-icon">
+                  <svg viewBox="0 0 80 80" width="64" height="64">
+                    <rect
+                      x="14"
+                      y="18"
+                      width="36"
+                      height="34"
+                      rx="2"
+                      fill="#f6efe2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path d="M14 26 L50 26" stroke="currentColor" stroke-width="2" />
+                    <path
+                      d="M22 14 L22 22 M42 14 L42 22"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <rect x="20" y="32" width="5" height="5" fill="#e16a3a" />
+                    <rect x="29" y="32" width="5" height="5" fill="currentColor" opacity="0.2" />
+                    <rect x="38" y="32" width="5" height="5" fill="currentColor" opacity="0.2" />
+                    <rect x="20" y="41" width="5" height="5" fill="currentColor" opacity="0.2" />
+                    <rect
+                      x="40"
+                      y="46"
+                      width="26"
+                      height="18"
+                      rx="2"
+                      fill="#fff"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M40 48 L53 58 L66 48"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                    />
+                    <circle cx="64" cy="46" r="4" fill="#e16a3a" />
+                  </svg>
+                </div>
+                <h3 class="p-services__card-title">庶務・秘書業務</h3>
+                <p class="p-services__card-desc">
+                  メール対応・スケジュール管理・資料作成など。細かな事務作業を丁寧にサポートします。
+                </p>
+                <div class="p-services__card-tags">
+                  <span class="p-services__card-tag">メール対応</span>
+                  <span class="p-services__card-tag">スケジュール管理</span>
+                  <span class="p-services__card-tag">資料作成</span>
+                  <span class="p-services__card-tag">リサーチ</span>
+                </div>
+              </article>
+
+              <!-- 06 AI活用・業務効率化 -->
+              <article class="p-services__card js-reveal">
+                <div class="p-services__card-blob" aria-hidden="true"></div>
+                <div class="p-services__card-icon">
+                  <svg viewBox="0 0 80 80" width="64" height="64">
+                    <rect
+                      x="22"
+                      y="22"
+                      width="36"
+                      height="36"
+                      rx="6"
+                      fill="#f6efe2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M22 32 L14 32 M22 40 L14 40 M22 48 L14 48 M58 32 L66 32 M58 40 L66 40 M58 48 L66 48 M32 22 L32 14 M40 22 L40 14 M48 22 L48 14 M32 58 L32 66 M40 58 L40 66 M48 58 L48 66"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                    />
+                    <circle cx="40" cy="40" r="10" fill="none" stroke="#e16a3a" stroke-width="2" />
+                    <path
+                      d="M36 38 L40 42 L44 38 M36 42 L40 46 L44 42"
+                      stroke="#e16a3a"
+                      stroke-width="1.6"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                    <path d="M12 14 L12 20 M9 17 L15 17" stroke="#e16a3a" stroke-width="1.4" stroke-linecap="round" />
+                    <path d="M68 62 L68 68 M65 65 L71 65" stroke="#e16a3a" stroke-width="1.4" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <h3 class="p-services__card-title">AI活用・業務効率化</h3>
+                <p class="p-services__card-desc">
+                  ChatGPT・Gemini・Claude等を活用した業務効率化の提案と実行。あなたの業務にAIを組み込みます。
+                </p>
+                <div class="p-services__card-tags">
+                  <span class="p-services__card-tag">ChatGPT</span>
+                  <span class="p-services__card-tag">Gemini</span>
+                  <span class="p-services__card-tag">Claude</span>
+                  <span class="p-services__card-tag">プロンプト設計</span>
+                  <span class="p-services__card-tag">自動化</span>
+                </div>
+              </article>
+            </div>
+            <!-- /.p-services__grid -->
+          </div>
+          <!-- /.p-services__inner -->
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="p-pricing">
+          <div class="p-pricing__inner">
+            <div class="c-section-tag">
+              <span class="c-section-tag__num">03</span>
+              <span class="c-section-tag__line" aria-hidden="true"></span>
+              <span class="c-section-tag__text">Pricing</span>
+            </div>
+
+            <h2 class="p-pricing__title">選べる<span class="p-pricing__title-accent">料金プラン</span></h2>
+            <p class="p-pricing__lead">
+              単発のお仕事から、月額で右腕としてご利用いただくプランまで。<br />
+              あなたの状況にあわせて、お選びいただけます。
+            </p>
+
+            <!-- 上段：3カラム -->
+            <div class="p-pricing__grid-top">
+              <!-- PLAN 01 月額パック ライト -->
+              <article class="p-pricing__card js-reveal">
+                <div class="p-pricing__card-head">
+                  <div class="p-pricing__card-num">PLAN 01</div>
+                  <h3 class="p-pricing__card-name"><span class="p-pricing__card-name-prefix">月額パック</span><br class="p-pricing__br"> <span class="p-pricing__card-name-lite">ライト</span></h3>
+                </div>
+                <div class="p-pricing__card-price">
+                  <div class="p-pricing__card-price-wrap">
+                    <span class="p-pricing__card-price-main">30,000円</span>
+                    <span class="p-pricing__card-price-unit">／月（税込）</span>
+                  </div>
+                </div>
+                <p class="p-pricing__card-tagline">定型事務を1〜2種類お任せしたい方に</p>
+                <ul class="p-pricing__card-features">
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>記帳代行</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>スケジュール管理</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>請求書作成 など</span>
+                  </li>
+                </ul>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdGUqtF5AYiUMlGw5PaJH-vSJ4NEDmUBkj6lxT67m2n-ilzOg/viewform"
+                  target="_blank"
+                  rel="noopener"
+                  class="c-button c-button--outline c-button--sm"
+                >
+                  ご相談する<span class="c-button__arrow" aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- PLAN 02 月額パック スタンダード（featured） -->
+              <article class="p-pricing__card p-pricing__card--featured js-reveal">
+                <div class="p-pricing__card-badge">★ 一番人気</div>
+                <div class="p-pricing__card-blob" aria-hidden="true"></div>
+                <div class="p-pricing__card-head">
+                  <div class="p-pricing__card-num">PLAN 02</div>
+                  <h3 class="p-pricing__card-name"><span class="p-pricing__card-name-prefix">月額パック</span><br class="p-pricing__br"> <span class="p-pricing__card-name-standard">スタンダード</span></h3>
+                </div>
+                <div class="p-pricing__card-price">
+                  <div class="p-pricing__card-price-wrap">
+                    <span class="p-pricing__card-price-main">60,000円</span>
+                    <span class="p-pricing__card-price-unit">／月（税込）</span>
+                  </div>
+                </div>
+                <p class="p-pricing__card-tagline">事務＋社外やり取り全般をお任せ</p>
+                <ul class="p-pricing__card-features">
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>定型事務（記帳・請求書・スケジュール）</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>社外やり取り（お客様対応・メール/LINE一次対応）</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>サンプル発注やリサーチ</span>
+                  </li>
+                </ul>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScJ91DRGsnqJdwsh2VOww21a4F2b0YgN51tmmonEUQILQo7mA/viewform"
+                  target="_blank"
+                  rel="noopener"
+                  class="c-button c-button--fill c-button--sm"
+                >
+                  ご相談する<span class="c-button__arrow" aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- PLAN 03 月額パック プレミアム -->
+              <article class="p-pricing__card js-reveal">
+                <div class="p-pricing__card-head">
+                  <div class="p-pricing__card-num">PLAN 03</div>
+                  <h3 class="p-pricing__card-name"><span class="p-pricing__card-name-prefix">月額パック</span><br class="p-pricing__br"> <span class="p-pricing__card-name-premium">プレミアム</span></h3>
+                </div>
+                <div class="p-pricing__card-price">
+                  <div class="p-pricing__card-price-wrap">
+                    <span class="p-pricing__card-price-main">100,000円</span>
+                    <span class="p-pricing__card-price-unit">／月（税込）</span>
+                  </div>
+                </div>
+                <p class="p-pricing__card-tagline">右腕として深く関わってほしい方に</p>
+                <ul class="p-pricing__card-features">
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>定型事務＋社外やり取り全般</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>業務フロー整理・マニュアル化</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>仕組み化のご相談</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>観察力で「言葉になっていない面倒」を一緒に解決</span>
+                  </li>
+                </ul>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSemTHjpKTsZwF7xzyxTne5D9ZIMuyEuhXtbasWktJb2sLapzA/viewform"
+                  target="_blank"
+                  rel="noopener"
+                  class="c-button c-button--outline c-button--sm"
+                >
+                  ご相談する<span class="c-button__arrow" aria-hidden="true">→</span>
+                </a>
+              </article>
+            </div>
+            <!-- /.p-pricing__grid-top -->
+
+            <!-- 下段：2カラム（中央寄せ） -->
+            <div class="p-pricing__grid-bottom">
+              <!-- PLAN 04 スポット作業 -->
+              <article id="pricing-spot" class="p-pricing__card js-reveal">
+                <div class="p-pricing__card-head">
+                  <div class="p-pricing__card-num">PLAN 04</div>
+                  <h3 class="p-pricing__card-name"><span class="p-pricing__card-name-spot">スポット作業</span></h3>
+                </div>
+                <div class="p-pricing__card-price">
+                  <div class="p-pricing__card-price-wrap">
+                    <span class="p-pricing__card-price-main">3,000円〜</span>
+                    <span class="p-pricing__card-price-unit">（税込）</span>
+                  </div>
+                  <div class="p-pricing__card-price-note">30分目安</div>
+                </div>
+                <p class="p-pricing__card-tagline">「これだけ頼みたい」を気軽に</p>
+                <ul class="p-pricing__card-features">
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>記帳代行</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>リサーチ・議事録作成</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>データ整理</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>1回限りの作業</span>
+                  </li>
+                </ul>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfzyxmv1o7Env5FYYgENz0EaqUP8HVJMRM6NHy893DB_Oxk8w/viewform"
+                  target="_blank"
+                  rel="noopener"
+                  class="c-button c-button--outline c-button--sm"
+                >
+                  ご相談する<span class="c-button__arrow" aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- PLAN 05 個別案件 -->
+              <article class="p-pricing__card js-reveal">
+                <div class="p-pricing__card-head">
+                  <div class="p-pricing__card-num">PLAN 05</div>
+                  <h3 class="p-pricing__card-name"><span class="p-pricing__card-name-custom">個別案件</span></h3>
+                </div>
+                <div class="p-pricing__card-price">
+                  <div class="p-pricing__card-price-wrap">
+                    <span class="p-pricing__card-price-main">個別お見積もり</span>
+                  </div>
+                  <div class="p-pricing__card-price-note">プロジェクト単位</div>
+                </div>
+                <p class="p-pricing__card-tagline">まとまったプロジェクトはこちら</p>
+                <ul class="p-pricing__card-features">
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>HP・LP制作（Claude Design活用）</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>業務ツール構築（Claude Code活用）</span>
+                  </li>
+                  <li class="p-pricing__card-feature">
+                    <svg
+                      class="p-pricing__card-feature-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 9 L7 13 L15 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>まとまったプロジェクト</span>
+                  </li>
+                </ul>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdb-BKoLpdT8u_9NHtCxc5eJnSJ697BkKj_fjy60sOjKKlwHA/viewform"
+                  target="_blank"
+                  rel="noopener"
+                  class="c-button c-button--outline c-button--sm"
+                >
+                  お見積もり相談<span class="c-button__arrow" aria-hidden="true">→</span>
+                </a>
+              </article>
+            </div>
+            <!-- /.p-pricing__grid-bottom -->
+
+            <!-- 共通注記 -->
+            <div class="p-pricing__notes">
+              <span class="p-pricing__notes-label">すべてのプラン共通</span>
+              <div class="p-pricing__notes-items">
+                <span class="p-pricing__notes-item">
+                  <svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true">
+                    <path
+                      d="M3 9 L7 13 L15 4"
+                      fill="none"
+                      stroke="#d65a32"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  事前打ち合わせは無料
+                </span>
+                <span class="p-pricing__notes-item">
+                  <svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true">
+                    <path
+                      d="M3 9 L7 13 L15 4"
+                      fill="none"
+                      stroke="#d65a32"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  見積もり後のキャンセルもOK
+                </span>
+                <span class="p-pricing__notes-item">
+                  <svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true">
+                    <path
+                      d="M3 9 L7 13 L15 4"
+                      fill="none"
+                      stroke="#d65a32"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  お支払いは銀行振込
+                </span>
+              </div>
+            </div>
+            <!-- /.p-pricing__notes -->
+
+            <!-- はじめての方へ -->
+            <div class="p-pricing__new-client">
+              <div class="p-pricing__new-client-blob" aria-hidden="true"></div>
+              <div class="p-pricing__new-client-left">
+                <div class="p-pricing__new-client-label">FOR NEW CLIENTS / はじめての方へ</div>
+                <div class="p-pricing__new-client-body">
+                  <p class="p-pricing__new-client-main">
+                    「いきなり月額は不安…」<br class="p-pricing__new-client-br" />という方には、<br />
+                    <span class="p-pricing__new-client-accent">『2ヶ月の段階的な業務改善提案』</span><br class="p-pricing__new-client-br" />もあります 🍤
+                  </p>
+                </div>
+              </div>
+              <p class="p-pricing__new-client-sub">最初の2ヶ月で仕組みを作ってから、<br class="p-pricing__new-client-br--pc" />月額プラン or 一旦終了をお選びいただけます。</p>
+            </div>
+
+            <!-- 迷ったら CTA -->
+            <div class="p-pricing__cta">
+              <p class="p-pricing__cta-title">
+                迷ったら、<br class="p-pricing__cta-br--sp" /><span class="p-pricing__cta-accent">まずはスポット</span>から 🍤
+              </p>
+              <p class="p-pricing__cta-lead">30分のスポット相談から始められます。</p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdGwQPf6zybCpuXeVpWJPe9eecjuu7wf8wFoXV_9FfMqV7caw/viewform"
+                target="_blank"
+                rel="noopener"
+                class="c-button c-button--fill c-button--lift"
+              >
+                まずは相談する<span class="c-button__arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          <!-- /.p-pricing__inner -->
+        </section>
+
+        <!-- Strengths -->
+        <section id="strengths" class="p-strengths">
+          <div class="p-strengths__blob" aria-hidden="true"></div>
+          <div class="p-strengths__inner">
+            <div class="c-section-tag">
+              <span class="c-section-tag__num">04</span>
+              <span class="c-section-tag__line" aria-hidden="true"></span>
+              <span class="c-section-tag__text">What You Get</span>
+            </div>
+
+            <h2 class="p-strengths__title">
+              お願いすると、<br class="p-strengths__title-br">こう<span class="p-strengths__title-accent">変わります</span>
+            </h2>
+
+            <div class="p-strengths__list">
+              <article class="p-strengths__item js-reveal">
+                <div class="p-strengths__item-left">
+                  <div class="p-strengths__item-num">01</div>
+                  <div class="p-strengths__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 80 80" width="72" height="72">
+                      <rect
+                        x="14"
+                        y="14"
+                        width="36"
+                        height="42"
+                        fill="#f6efe2"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M20 24 L42 24 M20 30 L38 30 M20 36 L42 36 M20 42 L36 42"
+                        stroke="currentColor"
+                        stroke-width="1.4"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M18 24 L19 25 L22 22 M18 30 L19 31 L22 28 M18 36 L19 37 L22 34"
+                        stroke="#e16a3a"
+                        stroke-width="1.6"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle cx="54" cy="52" r="10" fill="none" stroke="currentColor" stroke-width="2.4" />
+                      <path d="M62 60 L70 68" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                      <circle cx="54" cy="52" r="5" fill="#e16a3a" opacity="0.4" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="p-strengths__item-body">
+                  <h3 class="p-strengths__item-title">「何を頼めばいいかわからない」がなくなる</h3>
+                  <p class="p-strengths__item-text">
+                    まずは困っていることを聞かせてください。業務を整理して「こんなこともお任せいただけますよ」とご提案します。定期的な業務レポートで、何をやっているかも見える化。安心してお任せいただけます。
+                  </p>
+                </div>
+              </article>
+
+              <article class="p-strengths__item js-reveal">
+                <div class="p-strengths__item-left">
+                  <div class="p-strengths__item-num">02</div>
+                  <div class="p-strengths__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 80 80" width="72" height="72">
+                      <path
+                        d="M14 50 L70 16 L56 64 L44 48 L22 54 Z"
+                        fill="#f6efe2"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M44 48 L56 64 L50 50"
+                        fill="#e8dcc3"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linejoin="round"
+                      />
+                      <path d="M44 48 L70 16" stroke="currentColor" stroke-width="1.4" />
+                      <path
+                        d="M8 30 L22 30 M10 40 L26 40 M12 50 L28 50"
+                        stroke="#e16a3a"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="p-strengths__item-body">
+                  <h3 class="p-strengths__item-title">「早い」のに「ちゃんとしてる」</h3>
+                  <p class="p-strengths__item-text">
+                    複数のAIツールを活用して、スピーディーに仕上げます。もちろん、すべて人の目でチェック・調整してからお渡し。「速くて雑」ではなく「速くて丁寧」なアウトプットをお届けします。
+                  </p>
+                </div>
+              </article>
+
+              <article class="p-strengths__item js-reveal">
+                <div class="p-strengths__item-left">
+                  <div class="p-strengths__item-num">03</div>
+                  <div class="p-strengths__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 80 80" width="72" height="72">
+                      <path
+                        d="M40 22 C 34 14, 20 16, 20 28 C 20 40, 40 54, 40 54 C 40 54, 60 40, 60 28 C 60 16, 46 14, 40 22 Z"
+                        fill="#e16a3a"
+                        stroke="#c4522a"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12 60 C 18 54, 26 54, 30 58 L 40 64 L 50 58 C 54 54, 62 54, 68 60"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        fill="none"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M68 18 L68 24 M65 21 L71 21"
+                        stroke="currentColor"
+                        stroke-width="1.4"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="p-strengths__item-body">
+                  <h3 class="p-strengths__item-title">「任せてよかった」と思える安心感</h3>
+                  <p class="p-strengths__item-text">
+                    ただの作業代行ではなく、あなたの事業のことを一緒に考えます。小さな仕事でも丁寧に。「次もお願いしたい」と思っていただける関係を大切にしています。
+                  </p>
+                </div>
+              </article>
+            </div>
+            <!-- /.p-strengths__list -->
+          </div>
+          <!-- /.p-strengths__inner -->
+        </section>
+
+        <!-- ========================================
+             Tools
+             ======================================== -->
+        <section id="tools" class="p-tools">
+          <div class="p-tools__inner">
+            <div class="c-section-tag">
+              <span class="c-section-tag__num">05</span>
+              <span class="c-section-tag__line" aria-hidden="true"></span>
+              <span class="c-section-tag__text">Tools</span>
+            </div>
+
+            <h2 class="p-tools__title">使用<span class="p-tools__title-accent">ツール</span></h2>
+            <p class="p-tools__lead">デザイン・AI・会計・開発まで。幅広いツールを使いこなして業務を遂行します。</p>
+
+            <div class="p-tools__grid">
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/canva.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">Canva</span>
+                  <span class="p-tools__card-tag">デザイン</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/chatgpt.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">ChatGPT</span>
+                  <span class="p-tools__card-tag">AI</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/gemini.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">Gemini</span>
+                  <span class="p-tools__card-tag">AI</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/claude.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">Claude</span>
+                  <span class="p-tools__card-tag">AI</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/claude-design.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">Claude Design</span>
+                  <span class="p-tools__card-tag">AI制作</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/claude-code.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">Claude Code</span>
+                  <span class="p-tools__card-tag">AI開発</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/genspark.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">Genspark</span>
+                  <span class="p-tools__card-tag">AI</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/notebooklm.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">NotebookLM</span>
+                  <span class="p-tools__card-tag">AI</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/money-forward.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">マネーフォワード</span>
+                  <span class="p-tools__card-tag">会計</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/free.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">Freee</span>
+                  <span class="p-tools__card-tag">会計</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/google-sheets.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">スプレッドシート</span>
+                  <span class="p-tools__card-tag">業務</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/chatwork.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">Chatwork</span>
+                  <span class="p-tools__card-tag">連絡</span>
+                </div>
+              </div>
+              <div class="p-tools__card js-reveal">
+                <img src="assets/img/tools-icon/notion.avif" alt="" class="p-tools__card-logo" />
+                <div class="p-tools__card-body">
+                  <span class="p-tools__card-name">Notion</span>
+                  <span class="p-tools__card-tag">業務</span>
+                </div>
+              </div>
+            </div>
+            <!-- /.p-tools__grid -->
+          </div>
+          <!-- /.p-tools__inner -->
+        </section>
+
+        <!-- ========================================
+             Flow
+             ======================================== -->
+        <section id="flow" class="p-flow">
+          <div class="p-flow__inner">
+            <div class="c-section-tag">
+              <span class="c-section-tag__num">06</span>
+              <span class="c-section-tag__line" aria-hidden="true"></span>
+              <span class="c-section-tag__text">Flow</span>
+            </div>
+
+            <h2 class="p-flow__title">ご利用の<span class="p-flow__title-accent">流れ</span></h2>
+
+            <div class="p-flow__content">
+              <div class="p-flow__connector js-reveal" aria-hidden="true"></div>
+              <div class="p-flow__grid">
+                <div class="p-flow__step js-reveal">
+                  <div class="p-flow__step-circle">01</div>
+                  <div class="p-flow__step-content">
+                    <h3 class="p-flow__step-title">お問い合わせ</h3>
+                    <p class="p-flow__step-body">
+                      まずはお気軽にご相談ください。困っていること、任せたいことをお聞かせください。
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-flow__step js-reveal">
+                  <div class="p-flow__step-circle">02</div>
+                  <div class="p-flow__step-content">
+                    <h3 class="p-flow__step-title">ヒアリング</h3>
+                    <p class="p-flow__step-body">業務内容を詳しく伺い、最適なサポートプランをご提案します。</p>
+                  </div>
+                </div>
+
+                <div class="p-flow__step js-reveal">
+                  <div class="p-flow__step-circle">03</div>
+                  <div class="p-flow__step-content">
+                    <h3 class="p-flow__step-title">業務開始</h3>
+                    <p class="p-flow__step-body">お任せいただいた業務を、スピードと丁寧さをもって遂行します。</p>
+                  </div>
+                </div>
+
+                <div class="p-flow__step js-reveal">
+                  <div class="p-flow__step-circle">04</div>
+                  <div class="p-flow__step-content">
+                    <h3 class="p-flow__step-title">報告・改善</h3>
+                    <p class="p-flow__step-body">定期的に業務レポートをお送りし、改善と次の提案を行います。</p>
+                  </div>
+                </div>
+              </div>
+              <!-- /.p-flow__grid -->
+            </div>
+            <!-- /.p-flow__content -->
+          </div>
+          <!-- /.p-flow__inner -->
+        </section>
+
+        <!-- ========================================
+             Profile
+             ======================================== -->
+        <section id="profile" class="p-profile">
+          <div class="p-profile__inner">
+            <div class="c-section-tag">
+              <span class="c-section-tag__num">07</span>
+              <span class="c-section-tag__line" aria-hidden="true"></span>
+              <span class="c-section-tag__text">Profile</span>
+            </div>
+
+            <h2 class="p-profile__title">秘書について</h2>
+
+            <div class="p-profile__grid js-reveal">
+              <!-- 左カラム：ポートレイト -->
+              <div class="p-profile__portrait">
+                <div class="p-profile__portrait-overlay" aria-hidden="true"></div>
+                <img src="assets/img/ribe-icon.png" alt="ヨハク秘書" class="p-profile__portrait-img" />
+                <div class="p-profile__portrait-petal p-profile__portrait-petal--1" aria-hidden="true"></div>
+                <div class="p-profile__portrait-petal p-profile__portrait-petal--2" aria-hidden="true"></div>
+              </div>
+
+              <!-- 右カラム：プロフィール本文 -->
+              <div class="p-profile__bio">
+                <div class="p-profile__name-wrap">
+                  <h3 class="p-profile__name">ヨハク秘書</h3>
+                  <span class="p-profile__name-en">YOHAKU SECRETARY</span>
+                </div>
+
+                <blockquote class="p-profile__quote">
+                  「やるべきこと」が多すぎて前に進めない。<br />
+                  そんな事業者さんの<span class="p-profile__quote-accent">『余白』</span
+                  >を作るのが、<br />私の仕事です。
+                </blockquote>
+
+                <p class="p-profile__text">
+                  フリーランス・個人事業主の方を中心に、HP・LP制作（Claude Design）・業務ツール構築（Claude
+                  Code）・デザイン・経理・事務まで、幅広い業務を業務代行×コンサルでサポート。AIを早くから業務に取り入れてきた経験を活かし、「速くて、丁寧で、先回りできる」秘書業務をお届けしています。小さな依頼でもお気軽にご相談ください。
+                </p>
+
+                <div class="p-profile__facts">
+                  <div class="p-profile__fact">
+                    <div class="p-profile__fact-key">得意分野</div>
+                    <div class="p-profile__fact-val">HP・LP制作 / 業務ツール構築 / AI活用</div>
+                  </div>
+                  <div class="p-profile__fact">
+                    <div class="p-profile__fact-key">対応ツール</div>
+                    <div class="p-profile__fact-val">
+                      Claude Design / Claude Code / Canva / MF / Freee / Notion ほか
+                    </div>
+                  </div>
+                  <div class="p-profile__fact">
+                    <div class="p-profile__fact-key">連絡手段</div>
+                    <div class="p-profile__fact-val">Chatwork / LINE / メール</div>
+                  </div>
+                  <div class="p-profile__fact">
+                    <div class="p-profile__fact-key">稼働スタイル</div>
+                    <div class="p-profile__fact-val">完全リモート・平日中心</div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.p-profile__bio -->
+            </div>
+            <!-- /.p-profile__grid -->
+          </div>
+          <!-- /.p-profile__inner -->
+        </section>
+
+        <!-- ========================================
+             FAQ
+             ======================================== -->
+        <section id="faq" class="p-faq">
+          <div class="p-faq__inner">
+            <div class="c-section-tag">
+              <span class="c-section-tag__num">08</span>
+              <span class="c-section-tag__line" aria-hidden="true"></span>
+              <span class="c-section-tag__text">FAQ</span>
+            </div>
+
+            <h2 class="p-faq__title">よくある<span class="p-faq__title-accent">質問</span></h2>
+
+            <div class="p-faq__list">
+              <div class="p-faq__item is-open">
+                <button class="p-faq__btn" type="button">
+                  <span class="p-faq__q-label">Q</span>
+                  <span class="p-faq__q-text">何を頼めばいいかわからないのですが、大丈夫ですか？</span>
+                  <span class="p-faq__icon" aria-hidden="true"></span>
+                </button>
+                <div class="p-faq__panel">
+                  <div class="p-faq__a">
+                    <span class="p-faq__a-label">A</span>
+                    <span class="p-faq__a-text"
+                      >もちろんです！まずはお気軽にご相談ください。ヒアリングを通じて、お任せいただける業務を一緒に整理します。「こんなこともできますよ」というご提案もいたします。</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-faq__item">
+                <button class="p-faq__btn" type="button">
+                  <span class="p-faq__q-label">Q</span>
+                  <span class="p-faq__q-text">どんな業務に対応していますか？</span>
+                  <span class="p-faq__icon" aria-hidden="true"></span>
+                </button>
+                <div class="p-faq__panel">
+                  <div class="p-faq__a">
+                    <span class="p-faq__a-label">A</span>
+                    <span class="p-faq__a-text"
+                      >HP・LP制作（Claude Design活用）、業務ツール構築（Claude
+                      Code活用）、デザイン制作、経理・記帳代行、庶務・秘書業務、AI活用・業務効率化のご提案など、幅広く対応しています。まずはお気軽にお聞きください。</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-faq__item">
+                <button class="p-faq__btn" type="button">
+                  <span class="p-faq__q-label">Q</span>
+                  <span class="p-faq__q-text">AIを使っているとのことですが、品質は大丈夫ですか？</span>
+                  <span class="p-faq__icon" aria-hidden="true"></span>
+                </button>
+                <div class="p-faq__panel">
+                  <div class="p-faq__a">
+                    <span class="p-faq__a-label">A</span>
+                    <span class="p-faq__a-text"
+                      >AIはあくまでスピードアップのためのツールです。すべてのアウトプットは私が内容をチェック・調整してからお渡ししますので、品質にはご安心ください。</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-faq__item">
+                <button class="p-faq__btn" type="button">
+                  <span class="p-faq__q-label">Q</span>
+                  <span class="p-faq__q-text">料金はどのくらいですか？</span>
+                  <span class="p-faq__icon" aria-hidden="true"></span>
+                </button>
+                <div class="p-faq__panel">
+                  <div class="p-faq__a">
+                    <span class="p-faq__a-label">A</span>
+                    <span class="p-faq__a-text"
+                      >スポット作業は3,000円〜（30分目安・税込）、月額パックはライト30,000円／スタンダード60,000円／プレミアム100,000円（税込・各月額）の3プラン、HP制作などまとまった案件は個別お見積もりです。事前打ち合わせは無料、見積もり後のキャンセルもOKですのでご安心ください。</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-faq__item">
+                <button class="p-faq__btn" type="button">
+                  <span class="p-faq__q-label">Q</span>
+                  <span class="p-faq__q-text">連絡手段は何ですか？</span>
+                  <span class="p-faq__icon" aria-hidden="true"></span>
+                </button>
+                <div class="p-faq__panel">
+                  <div class="p-faq__a">
+                    <span class="p-faq__a-label">A</span>
+                    <span class="p-faq__a-text"
+                      >Chatwork、LINE、メールなど、クライアント様のご都合に合わせて対応いたします。</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.p-faq__list -->
+          </div>
+          <!-- /.p-faq__inner -->
+        </section>
+
+        <!-- ========================================
+             CTA
+             ======================================== -->
+        <section class="p-cta">
+          <div class="p-cta__blob" aria-hidden="true"></div>
+          <div class="p-cta__inner">
+            <div class="p-cta__eyebrow">GET IN TOUCH</div>
+            <h2 class="p-cta__title">
+              まずは<br />
+              お気軽に<span class="p-cta__title-accent">ご相談</span>ください。
+            </h2>
+            <p class="p-cta__lead">
+              「こんなこと頼めるかな？」でOKです。<br />
+              あなたの事業をサポートできることを、一緒に見つけましょう。
+            </p>
+            <div class="p-cta__actions">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdGwQPf6zybCpuXeVpWJPe9eecjuu7wf8wFoXV_9FfMqV7caw/viewform"
+                target="_blank"
+                rel="noopener"
+                class="c-button c-button--fill c-button--lg c-button--lift"
+              >
+                無料で相談する
+                <span class="c-button__arrow" aria-hidden="true">→</span>
+              </a>
+              <span class="p-cta__note">リベシティの方はDMでもお気軽にどうぞ</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- フッター -->
+      <!-- ========================================
+           Footer
+           ======================================== -->
+      <footer class="l-footer">
+        <div class="l-footer__inner">
+          <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+            <a href="#services" class="l-footer__nav-link">サービス</a>
+            <a href="#strengths" class="l-footer__nav-link">強み</a>
+            <a href="#flow" class="l-footer__nav-link">ご利用の流れ</a>
+            <a href="#faq" class="l-footer__nav-link">Q&amp;A</a>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdGwQPf6zybCpuXeVpWJPe9eecjuu7wf8wFoXV_9FfMqV7caw/viewform"
+              target="_blank"
+              rel="noopener"
+              class="l-footer__nav-link"
+              >お問い合わせ</a
+            >
+          </nav>
+        </div>
+        <div class="l-footer__copyright">
+          <span class="l-footer__trademark">各サービス名・ロゴは各社の商標または登録商標です。</span>
+          <span>© 2026 「ヨハク」を作る業務代行×コンサル秘書 🍤<br class="l-footer__copyright-br" /> All Rights Reserved.</span>
+        </div>
+      </footer>
+    </div>
+    <!-- /#page-wrapper -->
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

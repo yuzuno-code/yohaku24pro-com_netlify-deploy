@@ -1,0 +1,2967 @@
+@charset "UTF-8";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2d2822;
+  background-color: #faf4ea;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt";
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 20% 30%, rgba(242, 165, 127, 0.1), transparent 45%), radial-gradient(circle at 80% 70%, rgba(225, 106, 58, 0.06), transparent 50%), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence baseFrequency='0.85' seed='3'/><feColorMatrix values='0 0 0 0 0.43  0 0 0 0 0.36  0 0 0 0 0.26  0 0 0 0.05 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>");
+  background-size: auto, auto, 300px 300px;
+  opacity: 0.6;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+::-moz-selection {
+  background: #e87a52;
+  color: #faf4ea;
+}
+
+::selection {
+  background: #e87a52;
+  color: #faf4ea;
+}
+
+#page-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding-block: clamp(1rem, 1.057px + 1.496vw, 1.375rem);
+  padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+  background: rgba(250, 244, 234, 0);
+  border-bottom: 1px solid transparent;
+  transition: padding-block 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), backdrop-filter 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@media (min-width: 1000px) {
+  .l-header {
+    padding-inline: 2.5rem;
+  }
+}
+.l-header.is-scrolled {
+  padding-block: clamp(0.75rem, 7.015px + 0.499vw, 0.875rem);
+  background: color-mix(in oklab, #faf4ea 88%, transparent);
+  backdrop-filter: blur(10px) saturate(1.2);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+  border-bottom-color: rgba(45, 40, 34, 0.12);
+}
+.l-header.is-menu-open {
+  background: #faf4ea;
+  transition: padding-block 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), backdrop-filter 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.l-footer {
+  padding: 2.5rem 1.25rem 1.875rem;
+  background: #faf4ea;
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+}
+@media (min-width: 768px) {
+  .l-footer {
+    padding: 3.75rem 2.5rem 2.5rem;
+  }
+}
+
+.l-footer__inner {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .l-footer__inner {
+    grid-template-columns: 1fr auto;
+    gap: 2.5rem;
+  }
+}
+
+.l-footer__nav {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  gap: 0.75rem 3rem;
+}
+@media (min-width: 500px) {
+  .l-footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .l-footer__nav {
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+}
+
+.l-footer__nav-link {
+  position: relative;
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 0.875rem;
+  color: #4a4237;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+.l-footer__nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: #e87a52;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  html.is-hoverable .l-footer__nav-link:hover::after {
+    transform: scaleX(1);
+  }
+}
+.l-footer__nav-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.l-footer__copyright {
+  max-width: 75rem;
+  margin: 2.5rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.6875rem;
+  color: #7d7161;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
+.l-footer__trademark {
+  font-size: 0.625rem;
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .l-footer__copyright-br {
+    display: none;
+  }
+}
+
+.c-ebi-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(circle at 38% 36%, #fbeadd 0%, #f5d6bc 70%, #eec19f 100%);
+  box-shadow: inset 0 0 0 1px rgba(196, 82, 42, 0.12);
+}
+
+.c-ebi-mark__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 45%;
+     object-position: 50% 45%;
+}
+
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.9375rem 2.25rem;
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.c-button--fill {
+  background: #d65a32;
+  color: #faf4ea;
+  border-color: #d65a32;
+}
+@media (hover: hover) and (pointer: fine) {
+  html.is-hoverable .c-button--fill:hover {
+    background: color-mix(in oklab, #d65a32 88%, white);
+    border-color: color-mix(in oklab, #d65a32 88%, white);
+  }
+}
+.c-button--fill:focus-visible {
+  background: color-mix(in oklab, #d65a32 88%, white);
+  border-color: color-mix(in oklab, #d65a32 88%, white);
+}
+
+.c-button--outline {
+  background: transparent;
+  color: #2d2822;
+  border-color: #2d2822;
+}
+@media (hover: hover) and (pointer: fine) {
+  html.is-hoverable .c-button--outline:hover {
+    background: #2d2822;
+    color: #faf4ea;
+  }
+}
+.c-button--outline:focus-visible {
+  background: #2d2822;
+  color: #faf4ea;
+}
+
+.c-button__arrow {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html.is-hoverable .c-button--lift:hover {
+    transform: translateY(-3px);
+  }
+}
+.c-button--lift:focus-visible {
+  transform: translateY(-3px);
+}
+
+.c-button--sm {
+  gap: 0.5rem;
+  padding: 0.6875rem 1.375rem;
+}
+
+.c-button--lg {
+  padding: 1.25rem 3rem;
+}
+
+.c-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 1000px) {
+  .c-nav {
+    max-width: 75rem;
+  }
+}
+
+.c-nav__logo {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.c-nav__logo-img {
+  height: 3.75rem;
+  width: auto;
+}
+
+.c-nav__logo-name {
+  display: block;
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #2d2822;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+}
+
+.c-nav__logo-sub {
+  display: block;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.6875rem;
+  color: #7d7161;
+  letter-spacing: 0.2em;
+  margin-top: 2px;
+}
+
+.c-nav__links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding-block: 5.75rem 0;
+  background: #faf4ea;
+  visibility: hidden;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s 0.5s;
+  z-index: 99;
+}
+.c-nav.is-open .c-nav__links {
+  visibility: visible;
+  clip-path: inset(0 0 0% 0);
+  transition: clip-path 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s;
+}
+@media (min-width: 1000px) {
+  .c-nav__links {
+    position: static;
+    top: auto;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding-block: 0;
+    padding-inline: 0;
+    background: none;
+    visibility: visible;
+    clip-path: none;
+    transition: none;
+    z-index: auto;
+  }
+}
+
+.c-nav__links-inner {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  max-width: 23.75rem;
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+}
+@media (min-width: 1000px) {
+  .c-nav__links-inner {
+    display: contents;
+  }
+}
+
+.c-nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1.125rem 0;
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.125rem;
+  color: #4a4237;
+  letter-spacing: 0.12em;
+  border-bottom: 1px solid rgba(45, 40, 34, 0.12);
+}
+.c-nav__link::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 1.25rem;
+  background: #e87a52;
+  flex-shrink: 0;
+}
+.c-nav__link::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: #e87a52;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  display: none;
+}
+@media (min-width: 1000px) {
+  .c-nav__link::after {
+    display: block;
+    left: 0.875rem;
+    right: 0.875rem;
+    bottom: 4px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  html.is-hoverable .c-nav__link:hover::after {
+    transform: scaleX(1);
+  }
+}
+.c-nav__link:focus-visible::after {
+  transform: scaleX(1);
+}
+@media (min-width: 1000px) {
+  .c-nav__link {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.875rem;
+    border-bottom: none;
+  }
+  .c-nav__link::before {
+    display: none;
+  }
+}
+
+.c-nav__cta {
+  margin-top: 3rem;
+  padding: 0.875rem 2.5rem;
+  width: 60%;
+  max-width: 23.75rem;
+  background: #d65a32;
+  color: #faf4ea;
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-align: center;
+  border: 1px solid #d65a32;
+  transition: background 0.2s, border-color 0.2s;
+}
+.c-nav__cta:active {
+  background: color-mix(in oklab, #d65a32 85%, black);
+  border-color: color-mix(in oklab, #d65a32 85%, black);
+}
+.c-nav__cta:focus-visible {
+  outline: 2px solid #d65a32;
+  outline-offset: 2px;
+}
+@media (min-width: 1000px) {
+  .c-nav__cta {
+    margin-left: 0.875rem;
+    margin-top: 0;
+    padding: 0.625rem 1.25rem;
+    width: auto;
+    max-width: none;
+    background: #2d2822;
+    border-color: #2d2822;
+    color: #faf4ea;
+    font-size: 0.8125rem;
+  }
+}
+@media (min-width: 1000px) and (hover: hover) and (pointer: fine) {
+  html.is-hoverable .c-nav__cta:hover {
+    background: #d65a32;
+    border-color: #d65a32;
+    color: #faf4ea;
+  }
+}
+@media (min-width: 1000px) {
+  .c-nav__cta:focus-visible {
+    background: #d65a32;
+    border-color: #d65a32;
+    color: #faf4ea;
+  }
+}
+
+.c-nav__hamburger {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+}
+@media (min-width: 1000px) {
+  .c-nav__hamburger {
+    display: none;
+  }
+}
+
+.c-nav__hamburger-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #2d2822;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s;
+}
+
+.c-nav.is-open .c-nav__hamburger-line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.c-nav.is-open .c-nav__hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.c-nav.is-open .c-nav__hamburger-line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.c-tate-badge {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: #7d7161;
+  line-height: 1;
+  padding: 6px 0;
+}
+
+.c-section-tag {
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1.125rem;
+}
+
+.c-section-tag__num {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  letter-spacing: 0.25em;
+  color: #d65a32;
+  text-transform: uppercase;
+}
+
+.c-section-tag__line {
+  display: block;
+  flex: 0 0 36px;
+  height: 1px;
+  background: #e87a52;
+}
+
+.c-section-tag__text {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  letter-spacing: 0.3em;
+  color: #7d7161;
+}
+
+.p-hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 6.25rem 1.25rem 3.75rem;
+  padding-inline: clamp(1rem, -6.95px + 6.12vw, 2.5rem);
+  display: flex;
+  align-items: center;
+  overflow-x: clip;
+}
+@media (min-width: 500px) {
+  .p-hero {
+    padding-top: clamp(100px, 40px + 12vw, 132px);
+  }
+}
+@media (min-width: 768px) {
+  .p-hero {
+    padding: clamp(73px, -149.7px + 29vw, 100px) 2.5rem 5rem;
+  }
+}
+
+.p-hero__blob {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.p-hero__blob--right {
+  right: 50%;
+  transform: translateX(50%);
+  top: 30%;
+  width: 52vw;
+  height: 52vw;
+  max-width: 720px;
+  max-height: 720px;
+  background: radial-gradient(circle at 50% 40%, #f5b89a 0%, transparent 62%);
+  opacity: 0.5;
+  filter: blur(8px);
+}
+@media (min-width: 500px) {
+  .p-hero__blob--right {
+    right: -8vw;
+    transform: none;
+    top: 10%;
+    background: radial-gradient(circle at 40% 40%, #f5b89a 0%, transparent 62%);
+  }
+}
+
+.p-hero__blob--left {
+  left: -6vw;
+  bottom: -4vw;
+  width: 36vw;
+  height: 36vw;
+  max-width: 440px;
+  max-height: 440px;
+  background: radial-gradient(circle at 60% 40%, #f5e1c8 0%, transparent 65%);
+  opacity: 0.7;
+  filter: blur(6px);
+}
+
+.p-hero__portrait {
+  position: relative;
+  width: clamp(8.75rem, 37vw, 10rem);
+  height: clamp(8.75rem, 37vw, 10rem);
+  margin: 0 auto;
+  opacity: 0.92;
+  pointer-events: none;
+}
+@media (min-width: 500px) {
+  .p-hero__portrait {
+    position: absolute;
+    right: 5%;
+    top: clamp(18px, 108px - 11.5vw, 50px);
+    width: clamp(6.875rem, -67px + 37.5vw, 13.75rem);
+    height: clamp(6.875rem, -67px + 37.5vw, 13.75rem);
+    margin: 0;
+  }
+}
+@media (min-width: 768px) {
+  .p-hero__portrait {
+    position: absolute;
+    right: 4%;
+    top: clamp(18px, 108px - 11.5vw, 50px);
+    width: clamp(220px, -111px + 43.1vw, 320px);
+    height: clamp(220px, -111px + 43.1vw, 320px);
+    margin: 0;
+    opacity: 0.95;
+  }
+}
+@media (min-width: 1000px) {
+  .p-hero__portrait {
+    width: clamp(320px, 28vw, 420px);
+    height: clamp(320px, 28vw, 420px);
+  }
+}
+
+.p-hero__portrait-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242, 165, 127, 0.22) 0%, transparent 70%);
+}
+
+.p-hero__portrait-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  filter: drop-shadow(0 10px 30px rgba(196, 82, 42, 0.18));
+}
+
+.p-hero__inner {
+  max-width: 75rem;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 500px) {
+  .p-hero__inner {
+    gap: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .p-hero__inner {
+    display: block;
+  }
+}
+
+.p-hero__kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 500px) {
+  .p-hero__kicker {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 768px) {
+  .p-hero__kicker {
+    justify-content: flex-start;
+  }
+}
+
+.p-hero__kicker-line {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #e87a52;
+  flex-shrink: 0;
+}
+
+.p-hero__kicker-text {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: clamp(11px, 9.8px + 0.32vw, 13px);
+  letter-spacing: 0.12em;
+  color: #d65a32;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .p-hero__kicker-text {
+    letter-spacing: clamp(1.32px, -7.1px + 1.095vw, 3.85px);
+  }
+}
+
+.p-hero__title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(2.125rem, 8.73px + 4.07vw, 2.5rem);
+  line-height: 1.32;
+  letter-spacing: 0.02em;
+  max-width: 17.375rem;
+  margin: 0 auto;
+  color: #2d2822;
+}
+@media (min-width: 500px) {
+  .p-hero__title {
+    font-size: clamp(2.125rem, 6.8vw, 2.75rem);
+    max-width: none;
+    margin: 0;
+  }
+}
+@media (min-width: 768px) {
+  .p-hero__title {
+    font-size: clamp(44px, -9.2px + 6.93vw, 60px);
+    line-height: 1.32;
+    max-width: none;
+    margin: 0 0 2rem;
+  }
+}
+
+.p-hero__title-line {
+  display: block;
+}
+.p-hero__title-line:nth-child(2) {
+  margin-left: -0.55em;
+}
+@media (min-width: 768px) {
+  .p-hero__title-line:first-child {
+    max-width: none;
+  }
+}
+
+.p-hero__title-accent {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 0.15em;
+  margin-right: -0.15em;
+}
+
+.p-hero__title-accent-text {
+  position: relative;
+  z-index: 2;
+  color: #d65a32;
+}
+
+.p-hero__title-accent-glow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.05em;
+  height: 0.36em;
+  background: radial-gradient(ellipse at center, #f5b89a 0%, transparent 75%);
+  opacity: 0.6;
+  z-index: 1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.p-hero__title-sub {
+  display: block;
+  font-size: clamp(1.5rem, 20.18px + 1.02vw, 1.75rem);
+  font-weight: 500;
+  color: #4a4237;
+  margin-top: 0.75rem;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .p-hero__title-sub {
+    font-size: clamp(28px, 8px + 2.6vw, 34px);
+    margin-top: clamp(12px, -8px + 2.6vw, 18px);
+    white-space: normal;
+  }
+}
+.p-hero__title-sub {
+  letter-spacing: 0.02em;
+}
+
+.p-hero__title-cross {
+  color: #d65a32;
+  margin: 0 0.08em;
+}
+
+.p-hero__lead {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.125rem, 1.5vw, 1.3125rem);
+  line-height: 1.75;
+  color: #2d2822;
+  max-width: 35rem;
+  margin: 0 0 1rem;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .p-hero__lead {
+    font-size: clamp(18px, -1px + 2.5vw, 21px);
+  }
+}
+
+.p-hero__service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.125rem 0;
+  margin: 0 0 0.875rem;
+  padding: 0;
+  list-style: none;
+}
+
+.p-hero__service-tag {
+  font-size: 0.875rem;
+  color: #7d7161;
+}
+.p-hero__service-tag:not(:last-child)::after {
+  content: "／";
+  margin: 0 0.3125rem;
+  color: rgba(45, 40, 34, 0.12);
+}
+
+.p-hero__body {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4a4237;
+  max-width: 35rem;
+  margin: 0 0 clamp(2rem, 8vw, 3rem);
+}
+@media (min-width: 768px) {
+  .p-hero__body {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+@media (min-width: 1000px) {
+  .p-hero__body {
+    line-height: clamp(1.8em, 20.83px + 0.798vw, 2em);
+  }
+}
+
+.p-hero__underline {
+  text-decoration-color: #e87a52;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  white-space: nowrap;
+}
+
+.p-hero__body br {
+  display: none;
+}
+@media (min-width: 768px) {
+  .p-hero__body br {
+    display: inline;
+  }
+}
+
+.p-hero__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .p-hero__cta {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.p-hero__cta .c-button {
+  width: 100%;
+  max-width: 16.5rem;
+  padding-inline: 1.8125rem;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .p-hero__cta .c-button {
+    width: auto;
+    max-width: none;
+    padding-inline: 2.5rem;
+  }
+}
+
+.p-hero__aside {
+  display: none;
+}
+@media (min-width: 768px) {
+  .p-hero__aside {
+    position: absolute;
+    right: max(20px, (100% - 75rem) / 2 + 20px);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.125rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.p-hero__aside-line {
+  width: 1px;
+  height: 80px;
+  background: rgba(45, 40, 34, 0.12);
+}
+
+.p-hero__aside-year {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  color: #7d7161;
+  writing-mode: vertical-rl;
+}
+
+.p-hero__scroll {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .p-hero__scroll {
+    position: absolute;
+    bottom: -80px;
+    right: calc(4% + clamp(160px, 14vw, 210px));
+    left: auto;
+    transform: translateX(50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 1.2s 1.2s;
+  }
+}
+.p-hero__scroll.is-visible {
+  opacity: 0.7;
+}
+
+.p-hero__scroll-label {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.625rem;
+  letter-spacing: 0.3em;
+  color: #7d7161;
+}
+
+.p-hero__scroll-bar {
+  position: relative;
+  width: 1px;
+  height: 80px;
+  background: rgba(125, 113, 97, 0.25);
+  overflow: hidden;
+}
+
+.p-hero__scroll-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 26px;
+  background: #d65a32;
+  animation: hero-scroll-down 1.4s ease-in-out infinite;
+}
+
+@keyframes hero-scroll-down {
+  0% {
+    transform: translateY(-26px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+}
+.p-hero__kicker,
+.p-hero__title-line,
+.p-hero__title-sub,
+.p-hero__lead,
+.p-hero__body,
+.p-hero__cta {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.p-hero.is-loaded .p-hero__kicker {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+.p-hero.is-loaded .p-hero__title-line:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+.p-hero.is-loaded .p-hero__title-line:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+.p-hero.is-loaded .p-hero__title-sub {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+.p-hero.is-loaded .p-hero__lead {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.65s;
+}
+.p-hero.is-loaded .p-hero__body {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.75s;
+}
+.p-hero.is-loaded .p-hero__cta {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.85s;
+}
+
+.p-stats {
+  padding-block: clamp(3.75rem, 40.92px + 5.09vw, 5rem);
+  padding-inline: clamp(1.25rem, -17.3px + 7.46vw, 2.5rem);
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+  border-bottom: 1px solid rgba(45, 40, 34, 0.12);
+  background: color-mix(in oklab, #f3ebdb 60%, transparent);
+}
+
+.p-stats__inner {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.p-stats__lead {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1rem;
+  color: #4a4237;
+  text-align: center;
+  margin: 0 0 3rem;
+  letter-spacing: 0.05em;
+}
+
+.p-stats__lead-accent {
+  color: #d65a32;
+  font-weight: 700;
+}
+
+.p-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 768px) {
+  .p-stats__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.p-stats__item {
+  padding: 1.25rem 1rem;
+  text-align: center;
+  border-left: 1px solid rgba(45, 40, 34, 0.12);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.p-stats__item:nth-child(odd) {
+  border-left: none;
+}
+.p-stats__item:nth-child(3), .p-stats__item:nth-child(4) {
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+}
+@media (min-width: 768px) {
+  .p-stats__item {
+    padding: 1.75rem 1.5rem;
+    border-top: none;
+  }
+  .p-stats__item:nth-child(odd) {
+    border-left: 1px solid rgba(45, 40, 34, 0.12);
+  }
+  .p-stats__item:first-child {
+    border-left: none;
+  }
+  .p-stats__item:nth-child(3), .p-stats__item:nth-child(4) {
+    border-top: none;
+  }
+}
+.p-stats__item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.p-stats__item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.p-stats__item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.p-stats__item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.p-stats__item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (hover: hover) {
+  .p-stats__item:hover .p-stats__num {
+    color: #d65a32;
+  }
+  .p-stats__item:hover .p-stats__arrow {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+}
+
+.p-stats__num {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: clamp(2.375rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #2d2822;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s;
+}
+
+.p-stats__label {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 0.875rem;
+  color: #4a4237;
+  letter-spacing: 0.18em;
+}
+
+.p-stats__sub {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  justify-content: center;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  color: #7d7161;
+  letter-spacing: 0.2em;
+  margin-top: 0.25rem;
+}
+
+.p-stats__arrow {
+  opacity: 1;
+  font-size: 1rem;
+  color: #d65a32;
+  transition: transform 0.3s;
+}
+
+.p-problems {
+  position: relative;
+  padding-block: clamp(5rem, 22.8px + 15.3vw, 8.75rem);
+  padding-inline: clamp(1.25rem, -17.3px + 7.46vw, 2.5rem);
+}
+
+.p-problems__inner {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 500px) {
+  .p-problems__title br {
+    display: none;
+  }
+}
+
+.p-problems__title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(2rem, 4.4vw, 3.75rem);
+  line-height: 1.2;
+  margin: 0 0 3rem;
+}
+@media (min-width: 768px) {
+  .p-problems__title {
+    margin: 0 0 4.5rem;
+  }
+}
+
+.p-problems__title-accent {
+  color: #d65a32;
+}
+
+.p-problems__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 500px) {
+  .p-problems__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .p-problems__grid {
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  .p-problems__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.p-problems__card {
+  position: relative;
+  padding: 1.5rem 1.25rem;
+}
+@media (min-width: 768px) {
+  .p-problems__card {
+    padding: 2.25rem 1.75rem;
+  }
+}
+.p-problems__card {
+  background: #f3ebdb;
+  border: 1px solid rgba(45, 40, 34, 0.12);
+  cursor: default;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s;
+}
+.p-problems__card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.p-problems__card:nth-child(2) {
+  transition-delay: 0.22s;
+}
+.p-problems__card:nth-child(3) {
+  transition-delay: 0.34s;
+}
+.p-problems__card:nth-child(4) {
+  transition-delay: 0.46s;
+}
+.p-problems__card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.p-problems__card:hover {
+  transform: translateY(-6px);
+  background: #ede2cd;
+}
+
+.p-problems__card-icon {
+  color: #2d2822;
+  margin-bottom: 1.125rem;
+}
+
+.p-problems__card-tag {
+  display: inline-block;
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 0.75rem;
+  color: #d65a32;
+  letter-spacing: 0.2em;
+  padding: 3px 10px;
+  border: 1px solid #d65a32;
+  margin-bottom: 0.75rem;
+}
+
+.p-problems__card-text {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4a4237;
+  font-weight: 500;
+}
+
+.p-problems__closer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.125rem;
+  margin-top: 4.5rem;
+  text-align: center;
+}
+
+.p-problems__closer-sub {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  color: #d65a32;
+}
+
+@media (min-width: 500px) {
+  .p-problems__closer-title br {
+    display: none;
+  }
+}
+
+.p-problems__closer-title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(1.625rem, 3.2vw, 2.5rem);
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: #2d2822;
+}
+
+.p-problems__closer-accent {
+  color: #d65a32;
+}
+
+.p-problems__closer-body {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1rem;
+  color: #4a4237;
+  max-width: 32.5rem;
+  line-height: 1.8;
+}
+
+.p-services {
+  position: relative;
+  padding-block: clamp(5rem, 22.8px + 15.3vw, 8.75rem);
+  padding-inline: clamp(1.25rem, -17.3px + 7.46vw, 2.5rem);
+  background: #f3ebdb;
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+}
+
+.p-services__inner {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.p-services__header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: end;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 1000px) {
+  .p-services__header {
+    margin-bottom: 5rem;
+  }
+}
+
+.p-services__title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(2rem, 4.4vw, 3.75rem);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.p-services__title-accent {
+  color: #d65a32;
+}
+
+.p-services__lead {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(0.9375rem, 2.06vw, 1.3125rem);
+  line-height: 2;
+  color: #4a4237;
+  margin: 0;
+}
+
+.p-services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(45, 40, 34, 0.12);
+  background: #faf4ea;
+}
+@media (min-width: 1000px) {
+  .p-services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.p-services__card {
+  position: relative;
+  padding: 2rem 1.5rem;
+  min-height: auto;
+  background: #faf4ea;
+  cursor: default;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s;
+  border-bottom: 1px solid rgba(45, 40, 34, 0.12);
+}
+.p-services__card:last-child {
+  border-bottom: none;
+}
+@media (min-width: 1000px) {
+  .p-services__card {
+    padding: 3rem 2.25rem;
+    min-height: 20rem;
+    border-bottom: none;
+  }
+  .p-services__card:nth-child(3n-1), .p-services__card:nth-child(3n-2) {
+    border-right: 1px solid rgba(45, 40, 34, 0.12);
+  }
+  .p-services__card:nth-child(1), .p-services__card:nth-child(2), .p-services__card:nth-child(3) {
+    border-bottom: 1px solid rgba(45, 40, 34, 0.12);
+  }
+  .p-services__card:last-child {
+    border-bottom: none;
+  }
+}
+.p-services__card:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.p-services__card:nth-child(2) {
+  transition-delay: 0.13s;
+}
+.p-services__card:nth-child(3) {
+  transition-delay: 0.21s;
+}
+.p-services__card:nth-child(4) {
+  transition-delay: 0.29s;
+}
+.p-services__card:nth-child(5) {
+  transition-delay: 0.37s;
+}
+.p-services__card:nth-child(6) {
+  transition-delay: 0.45s;
+}
+.p-services__card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.p-services__card:hover, .p-services__card.is-active {
+  background: #f3ebdb;
+}
+.p-services__card:hover .p-services__card-tag, .p-services__card.is-active .p-services__card-tag {
+  background: #d65a32;
+  color: #faf4ea;
+  border-color: #d65a32;
+}
+.p-services__card:hover .p-services__card-blob, .p-services__card.is-active .p-services__card-blob {
+  opacity: 0.55;
+  background: radial-gradient(circle, #f5b89a 0%, transparent 70%);
+}
+
+.p-services__card-blob {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, #f5e1c8 0%, transparent 70%);
+  opacity: 0.4;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(4px);
+  transition: opacity 0.4s, background 0.4s;
+}
+
+.p-services__card-icon {
+  color: #2d2822;
+  margin-bottom: 1.375rem;
+  position: relative;
+}
+
+.p-services__card-title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin: 0 0 0.875rem;
+  color: #2d2822;
+  position: relative;
+}
+
+.p-services__card-desc {
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #4a4237;
+  margin: 0 0 1.25rem;
+  position: relative;
+}
+
+.p-services__card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  position: relative;
+}
+
+.p-services__card-tag {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  padding: 3px 9px;
+  color: #7d7161;
+  border: 1px solid rgba(45, 40, 34, 0.12);
+  letter-spacing: 0.1em;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.p-pricing {
+  position: relative;
+  padding-top: clamp(5rem, 22.8px + 15.3vw, 8.75rem);
+  padding-bottom: clamp(3.75rem, 2.74px + 15.27vw, 7.5rem);
+  padding-inline: clamp(1.25rem, -17.3px + 7.46vw, 2.5rem);
+}
+
+.p-pricing__inner {
+  max-width: 37.5rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .p-pricing__inner {
+    max-width: 75rem;
+  }
+}
+
+.p-pricing__title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(2rem, 4.4vw, 3.75rem);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.p-pricing__title-accent {
+  color: #d65a32;
+}
+
+.p-pricing__lead {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4a4237;
+  margin: 0 0 2.5rem;
+}
+@media (min-width: 768px) {
+  .p-pricing__lead {
+    margin: 0 0 4.5rem;
+  }
+}
+
+.p-pricing__grid-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .p-pricing__grid-top {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.p-pricing__grid-bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 50rem;
+  margin: 0 auto 2.5rem;
+}
+@media (min-width: 768px) {
+  .p-pricing__grid-bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin: 0 auto 3.5rem;
+  }
+}
+
+.p-pricing__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  padding: 2.5rem 1rem 2rem;
+  background: #f3ebdb;
+  border: 1px solid rgba(45, 40, 34, 0.12);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s;
+}
+@media (min-width: 768px) {
+  .p-pricing__card {
+    padding-inline: clamp(1rem, -10.6px + 3.46vw, 1.5rem);
+  }
+}
+.p-pricing__card:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.p-pricing__card:nth-child(2) {
+  transition-delay: 0.13s;
+}
+.p-pricing__card:nth-child(3) {
+  transition-delay: 0.21s;
+}
+.p-pricing__card:nth-child(4) {
+  transition-delay: 0.29s;
+}
+.p-pricing__card:nth-child(5) {
+  transition-delay: 0.37s;
+}
+.p-pricing__card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.p-pricing__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(45, 40, 34, 0.08);
+}
+.p-pricing__card--featured {
+  background: #faf4ea;
+  border: 2px solid #d65a32;
+  box-shadow: 0 12px 40px rgba(214, 90, 50, 0.15), 0 4px 12px rgba(45, 40, 34, 0.06);
+  z-index: 2;
+}
+.p-pricing__card--featured:hover {
+  box-shadow: 0 16px 48px rgba(214, 90, 50, 0.2), 0 6px 16px rgba(45, 40, 34, 0.08);
+}
+
+.p-pricing__card-badge {
+  position: absolute;
+  top: -0.875rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d65a32;
+  color: #faf4ea;
+  padding: 5px 18px;
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(214, 90, 50, 0.25);
+}
+
+.p-pricing__card-blob {
+  position: absolute;
+  top: -1.875rem;
+  right: -1.875rem;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f5b89a 0%, transparent 70%);
+  opacity: 0.45;
+  pointer-events: none;
+  filter: blur(6px);
+}
+
+.p-pricing__card-head {
+  position: relative;
+}
+
+.p-pricing__card-num {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  color: #d65a32;
+  letter-spacing: 0.25em;
+  margin-bottom: 0.375rem;
+}
+
+.p-pricing__card-name {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-weight: 600;
+  margin: 0;
+  color: #2d2822;
+  letter-spacing: 0.02em;
+}
+
+.p-pricing__card-name-prefix {
+  font-size: 1.375rem;
+}
+
+.p-pricing__card-name-lite {
+  font-size: 1.5rem;
+}
+
+.p-pricing__card-name-standard {
+  font-size: 1.5rem;
+}
+
+.p-pricing__card-name-premium {
+  font-size: 1.5rem;
+}
+
+.p-pricing__card-name-spot {
+  font-size: 1.5rem;
+}
+
+.p-pricing__card-name-custom {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1000px) {
+  .p-pricing__br {
+    display: none;
+  }
+}
+
+.p-pricing__card-price {
+  position: relative;
+}
+
+.p-pricing__card-price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.p-pricing__card-price-main {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #2d2822;
+  letter-spacing: -0.02em;
+}
+@media (min-width: 768px) {
+  .p-pricing__card-price-main {
+    font-size: 2rem;
+  }
+}
+
+.p-pricing__card-price-unit {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 0.875rem;
+  color: #4a4237;
+  letter-spacing: 0.05em;
+}
+@media (min-width: 768px) {
+  .p-pricing__card-price-unit {
+    margin-left: auto;
+  }
+}
+@media (min-width: 1000px) {
+  .p-pricing__card-price-unit {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-pricing__grid-bottom .p-pricing__card:first-child .p-pricing__card-price-unit {
+    margin-left: 0;
+  }
+}
+
+.p-pricing__card-price-note {
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  font-size: 0.875rem;
+  color: #7d7161;
+  margin-top: 0.375rem;
+  letter-spacing: 0.05em;
+}
+
+.p-pricing__card-tagline {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a4237;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  min-height: 2.375rem;
+}
+.p-pricing__card--featured .p-pricing__card-tagline {
+  min-height: 2.75rem;
+}
+
+.p-pricing__card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  position: relative;
+}
+
+.p-pricing__card-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #4a4237;
+}
+
+.p-pricing__card-feature-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #d65a32;
+}
+
+.p-pricing__card .c-button {
+  margin-top: 0.375rem;
+  justify-content: center;
+}
+
+.p-pricing__notes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.75rem 2rem;
+  background: #f3ebdb;
+  border: 1px solid rgba(45, 40, 34, 0.12);
+  margin-bottom: 2.5rem;
+}
+
+.p-pricing__notes-label {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 0.875rem;
+  color: #7d7161;
+  letter-spacing: 0.2em;
+}
+
+.p-pricing__notes-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem 2.5rem;
+}
+@media (min-width: 768px) {
+  .p-pricing__notes-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.p-pricing__notes-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  color: #4a4237;
+}
+
+.p-pricing__new-client {
+  position: relative;
+  padding: 1.75rem 1.25rem;
+  background: linear-gradient(135deg, color-mix(in oklab, #f5b89a 25%, #faf4ea) 0%, #f3ebdb 100%);
+  border: 1px solid rgba(45, 40, 34, 0.12);
+  border-radius: 4px;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .p-pricing__new-client {
+    padding: 2rem 2.25rem;
+  }
+}
+@media (min-width: 1000px) {
+  .p-pricing__new-client {
+    display: flex;
+    align-items: center;
+    gap: clamp(4rem, -16.4px + 8.04vw, 5rem);
+  }
+}
+@media (min-width: 1200px) {
+  .p-pricing__new-client {
+    gap: clamp(5rem, -160px + 20vw, 7rem);
+  }
+}
+
+.p-pricing__new-client-blob {
+  position: absolute;
+  top: -1.875rem;
+  right: -1.875rem;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f5b89a 0%, transparent 70%);
+  opacity: 0.4;
+  pointer-events: none;
+  filter: blur(6px);
+}
+
+.p-pricing__new-client-label {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.8125rem;
+  color: #d65a32;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.625rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .p-pricing__new-client-label {
+    letter-spacing: 0.3em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .p-pricing__new-client-left {
+    flex-shrink: 0;
+  }
+}
+
+.p-pricing__new-client-body {
+  position: relative;
+}
+
+.p-pricing__new-client-main {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #2d2822;
+  font-weight: 500;
+  margin: 0;
+}
+
+.p-pricing__new-client-accent {
+  color: #d65a32;
+  font-weight: 600;
+}
+
+.p-pricing__new-client-sub {
+  font-size: 1rem;
+  color: #4a4237;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+@media (min-width: 1000px) {
+  .p-pricing__new-client-sub {
+    flex-grow: 1;
+    margin-top: 0;
+    align-self: center;
+  }
+}
+
+@media (min-width: 500px) {
+  .p-pricing__new-client-br {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) {
+  .p-pricing__new-client-br--pc {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .p-pricing__new-client-br--pc {
+    display: inline;
+  }
+}
+
+.p-pricing__cta {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+  border-bottom: 1px solid rgba(45, 40, 34, 0.12);
+}
+
+.p-pricing__cta-title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: clamp(1.375rem, 3vw, 1.875rem);
+  font-weight: 600;
+  color: #2d2822;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.75rem;
+}
+
+.p-pricing__cta-accent {
+  color: #d65a32;
+}
+
+.p-pricing__cta-lead {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1rem;
+  color: #4a4237;
+  line-height: 1.8;
+  margin: 0 0 1.5rem;
+}
+
+@media (min-width: 500px) {
+  .p-pricing__cta-br--sp {
+    display: none;
+  }
+}
+
+.p-strengths {
+  position: relative;
+  padding-block: clamp(5rem, 3.65px + 20.36vw, 10rem);
+  padding-inline: clamp(1.25rem, -17.3px + 7.46vw, 2.5rem);
+  background: #ede2cd;
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+  overflow: hidden;
+}
+
+.p-strengths__blob {
+  position: absolute;
+  left: -8vw;
+  top: 10%;
+  width: 48vw;
+  height: 48vw;
+  max-width: 640px;
+  max-height: 640px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #f5b89a 0%, transparent 65%);
+  opacity: 0.35;
+  pointer-events: none;
+  filter: blur(10px);
+}
+
+.p-strengths__inner {
+  max-width: 57.5rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.p-strengths__title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(2rem, 4.4vw, 3.75rem);
+  line-height: 1.2;
+  margin: 0 0 3rem;
+}
+@media (min-width: 768px) {
+  .p-strengths__title {
+    margin: 0 0 4.5rem;
+  }
+}
+
+.p-strengths__title-accent {
+  color: #d65a32;
+}
+
+@media (min-width: 500px) {
+  .p-strengths__title-br {
+    display: none;
+  }
+}
+
+.p-strengths__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-strengths__item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 2.25rem 1rem;
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.p-strengths__item:last-child {
+  border-bottom: 1px solid rgba(45, 40, 34, 0.12);
+}
+.p-strengths__item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.p-strengths__item:nth-child(2) {
+  transition-delay: 0.25s;
+}
+.p-strengths__item:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.p-strengths__item.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (min-width: 768px) {
+  .p-strengths__item {
+    grid-template-columns: auto 1fr;
+    gap: clamp(3rem, -58px + 13.79vw, 5rem);
+    padding: 3.25rem 1.5rem;
+  }
+}
+
+.p-strengths__item-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .p-strengths__item-left {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 1000px) {
+  .p-strengths__item-left {
+    gap: 1.75rem;
+  }
+}
+
+.p-strengths__item-num {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: clamp(2.25rem, 1.5rem + 3.2vw, 3.5rem);
+  font-weight: 300;
+  color: #d65a32;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  width: clamp(3rem, 2.125rem + 3.84vw, 4.5rem);
+}
+
+.p-strengths__item-icon {
+  color: #2d2822;
+  flex-shrink: 0;
+}
+
+.p-strengths__item-icon svg {
+  display: block;
+  width: clamp(2.75rem, 2rem + 3.2vw, 4rem);
+  height: clamp(2.75rem, 2rem + 3.2vw, 4rem);
+}
+
+.p-strengths__item-title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: 1.625rem;
+  font-weight: 600;
+  margin: 0 0 0.875rem;
+  color: #2d2822;
+  line-height: 1.4;
+}
+
+.p-strengths__item-text {
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #4a4237;
+  margin: 0;
+  max-width: 38.75rem;
+}
+
+.p-tools {
+  padding-block: clamp(5rem, 22.8px + 15.3vw, 8.75rem);
+  padding-inline: clamp(1.25rem, -17.3px + 7.46vw, 2.5rem);
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+  border-bottom: 1px solid rgba(45, 40, 34, 0.12);
+}
+
+.p-tools__inner {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.p-tools__title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(2rem, 4.4vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.p-tools__title-accent {
+  color: #d65a32;
+}
+
+.p-tools__lead {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1rem;
+  color: #4a4237;
+  margin: 1rem 0 3.5rem;
+}
+
+.p-tools__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+  gap: 0.625rem;
+}
+@media (min-width: 768px) {
+  .p-tools__grid {
+    grid-template-columns: repeat(auto-fill, minmax(12.375rem, 1fr));
+    gap: 0.875rem;
+  }
+}
+
+.p-tools__card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 25rem;
+  margin-inline: auto;
+  padding: 1.375rem 1.25rem;
+  background: #f3ebdb;
+  border: 1px solid rgba(45, 40, 34, 0.12);
+  border-radius: 0.625rem;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.2s;
+}
+.p-tools__card:nth-child(1) {
+  transition-delay: 0s;
+}
+.p-tools__card:nth-child(2) {
+  transition-delay: 0.03s;
+}
+.p-tools__card:nth-child(3) {
+  transition-delay: 0.06s;
+}
+.p-tools__card:nth-child(4) {
+  transition-delay: 0.09s;
+}
+.p-tools__card:nth-child(5) {
+  transition-delay: 0.12s;
+}
+.p-tools__card:nth-child(6) {
+  transition-delay: 0.15s;
+}
+.p-tools__card:nth-child(7) {
+  transition-delay: 0.18s;
+}
+.p-tools__card:nth-child(8) {
+  transition-delay: 0.21s;
+}
+.p-tools__card:nth-child(9) {
+  transition-delay: 0.24s;
+}
+.p-tools__card:nth-child(10) {
+  transition-delay: 0.27s;
+}
+.p-tools__card:nth-child(11) {
+  transition-delay: 0.3s;
+}
+.p-tools__card:nth-child(12) {
+  transition-delay: 0.33s;
+}
+.p-tools__card:nth-child(13) {
+  transition-delay: 0.36s;
+}
+.p-tools__card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.p-tools__card.is-visible:hover {
+  background: #ede2cd;
+  transform: translateY(-3px);
+  transition-delay: 0s;
+}
+@media (min-width: 768px) {
+  .p-tools__card {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    max-width: none;
+    margin-inline: 0;
+  }
+}
+
+.p-tools__card-logo {
+  display: block;
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.25rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.p-tools__card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.p-tools__card-tag {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #d65a32;
+}
+
+.p-tools__card-name {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d2822;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.p-flow {
+  padding-block: clamp(5rem, 22.8px + 15.3vw, 8.75rem);
+  padding-inline: clamp(1.25rem, -17.3px + 7.46vw, 2.5rem);
+}
+
+.p-flow__inner {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .p-flow__inner {
+    max-width: none;
+  }
+}
+@media (min-width: 1000px) {
+  .p-flow__inner {
+    max-width: 75rem;
+  }
+}
+
+.p-flow__title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(2rem, 4.4vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 3rem;
+}
+@media (min-width: 768px) {
+  .p-flow__title {
+    margin: 0 0 5rem;
+  }
+}
+
+.p-flow__title-accent {
+  color: #d65a32;
+}
+
+.p-flow__content {
+  position: relative;
+}
+
+.p-flow__connector {
+  display: none;
+}
+@media (min-width: 768px) {
+  .p-flow__connector {
+    display: block;
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    top: 3rem;
+    height: 1px;
+    background: rgba(45, 40, 34, 0.12);
+    z-index: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s ease-in-out 0.1s;
+  }
+  .p-flow__connector.is-visible {
+    transform: scaleX(1);
+  }
+}
+
+.p-flow__grid {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .p-flow__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.p-flow__step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  text-align: left;
+  position: relative;
+  padding-bottom: 2.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.p-flow__step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: clamp(1.875rem, 20.5px + 2.54vw, 2.5rem);
+  top: clamp(3.75rem, 40.9px + 5.09vw, 5rem);
+  bottom: 0;
+  width: 1px;
+  background: rgba(45, 40, 34, 0.12);
+  z-index: 0;
+}
+.p-flow__step:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.p-flow__step:nth-child(2) {
+  transition-delay: 0.25s;
+}
+.p-flow__step:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.p-flow__step:nth-child(4) {
+  transition-delay: 0.55s;
+}
+.p-flow__step.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (min-width: 768px) {
+  .p-flow__step {
+    display: block;
+    text-align: center;
+    padding-bottom: 0;
+  }
+  .p-flow__step:not(:last-child)::before {
+    display: none;
+  }
+}
+
+.p-flow__step-circle {
+  flex-shrink: 0;
+  width: clamp(3.75rem, 40.9px + 5.09vw, 5rem);
+  height: clamp(3.75rem, 40.9px + 5.09vw, 5rem);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #f5b89a, #e87a52 70%, #d65a32 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: clamp(1.375rem, 18.2px + 1.02vw, 1.625rem);
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(196, 82, 42, 0.18);
+}
+@media (min-width: 768px) {
+  .p-flow__step-circle {
+    flex-shrink: initial;
+    width: clamp(5rem, 27px + 6.9vw, 6rem);
+    height: clamp(5rem, 27px + 6.9vw, 6rem);
+    font-size: clamp(1.625rem, -0.5px + 3.45vw, 2.125rem);
+    margin: 0 auto 1.75rem;
+  }
+}
+
+.p-flow__step-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.p-flow__step-title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.625rem;
+  color: #2d2822;
+}
+@media (min-width: 768px) {
+  .p-flow__step-title {
+    font-size: 1.375rem;
+    margin: 0 0 0.875rem;
+  }
+}
+
+.p-flow__step-body {
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #4a4237;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .p-flow__step-body {
+    margin: 0 auto;
+    max-width: 13.75rem;
+  }
+}
+
+.p-profile {
+  padding-block: clamp(5rem, 22.8px + 15.3vw, 8.75rem);
+  padding-inline: clamp(1.25rem, -17.3px + 7.46vw, 2.5rem);
+  background: #f3ebdb;
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+  border-bottom: 1px solid rgba(45, 40, 34, 0.12);
+}
+
+.p-profile__inner {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.p-profile__title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(2rem, 4.4vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 3rem;
+}
+@media (min-width: 768px) {
+  .p-profile__title {
+    margin: 0 0 5rem;
+  }
+}
+
+.p-profile__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.p-profile__grid.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (min-width: 768px) {
+  .p-profile__grid {
+    grid-template-columns: clamp(15rem, 31.25vw, 23.75rem) 1fr;
+    gap: clamp(2.5rem, -70px + 14.3vw, 5rem);
+  }
+}
+
+.p-profile__portrait {
+  aspect-ratio: 4/5;
+  max-width: 280px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: radial-gradient(circle at 50% 40%, #fbeadd 0%, #ede2cd 85%);
+  border: 1px solid rgba(45, 40, 34, 0.12);
+}
+@media (min-width: 768px) {
+  .p-profile__portrait {
+    aspect-ratio: 4/5;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+.p-profile__portrait-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 45%, rgba(242, 165, 127, 0.35), transparent 60%);
+  pointer-events: none;
+}
+
+.p-profile__portrait-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(196, 82, 42, 0.15));
+}
+
+.p-profile__portrait-petal {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.p-profile__portrait-petal--1 {
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 14px;
+  height: 14px;
+  background: #f5b89a;
+  opacity: 0.7;
+}
+.p-profile__portrait-petal--2 {
+  top: 3.75rem;
+  left: 1.5rem;
+  width: 8px;
+  height: 8px;
+  background: #e87a52;
+  opacity: 0.5;
+}
+
+.p-profile__name-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.p-profile__name {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.04em;
+  color: #2d2822;
+}
+
+.p-profile__name-en {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.875rem;
+  color: #7d7161;
+  letter-spacing: 0.2em;
+}
+
+.p-profile__quote {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.125rem;
+  line-height: 1.9;
+  color: #2d2822;
+  font-weight: 500;
+  margin: 0 0 2.25rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid #d65a32;
+}
+@media (min-width: 1000px) {
+  .p-profile__quote {
+    font-size: 1.375rem;
+  }
+}
+
+.p-profile__quote-accent {
+  color: #d65a32;
+}
+
+.p-profile__text {
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.95;
+  color: #4a4237;
+  margin: 0 0 2.25rem;
+}
+
+.p-profile__facts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+}
+@media (min-width: 1000px) {
+  .p-profile__facts {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 2.5rem;
+  }
+}
+
+.p-profile__fact-key {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.875rem;
+  color: #7d7161;
+  letter-spacing: 0.2em;
+}
+
+.p-profile__fact-val {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1rem;
+  color: #2d2822;
+}
+
+.p-faq {
+  padding-block: clamp(5rem, 22.8px + 15.3vw, 8.75rem);
+  padding-inline: clamp(1.25rem, -17.3px + 7.46vw, 2.5rem);
+}
+
+.p-faq__inner {
+  max-width: 57.5rem;
+  margin: 0 auto;
+}
+
+.p-faq__title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(2rem, 4.4vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 2.5rem;
+}
+@media (min-width: 768px) {
+  .p-faq__title {
+    margin: 0 0 3.75rem;
+  }
+}
+
+.p-faq__title-accent {
+  color: #d65a32;
+}
+
+.p-faq__item {
+  border-top: 1px solid rgba(45, 40, 34, 0.12);
+}
+.p-faq__item:last-child {
+  border-bottom: 1px solid rgba(45, 40, 34, 0.12);
+}
+
+.p-faq__btn {
+  position: relative;
+  width: 100%;
+  padding: 1.25rem 3rem;
+  text-align: left;
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+@media (min-width: 768px) {
+  .p-faq__btn {
+    padding: 1.75rem 3.75rem;
+  }
+}
+
+.p-faq__q-text {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .p-faq__q-text {
+    font-size: 1.375rem;
+  }
+}
+
+.p-faq__q-label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: 1.75rem;
+  color: #d65a32;
+  font-weight: 600;
+}
+
+.p-faq__icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+}
+.p-faq__icon::before, .p-faq__icon::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  background: #d65a32;
+  transform: translate(-50%, -50%);
+}
+.p-faq__icon::before {
+  width: 15px;
+  height: 1px;
+}
+.p-faq__icon::after {
+  width: 1px;
+  height: 15px;
+  transition: transform 0.3s ease;
+}
+.p-faq__item.is-open .p-faq__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.p-faq__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.p-faq__item.is-open .p-faq__panel {
+  max-height: none;
+}
+
+.p-faq__a {
+  position: relative;
+  padding: 0 3rem 1.25rem 3rem;
+}
+@media (min-width: 768px) {
+  .p-faq__a {
+    padding: 0 4rem 1.75rem 3.75rem;
+  }
+}
+
+.p-faq__a-label {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: 1.75rem;
+  color: #d65a32;
+  font-weight: 600;
+}
+
+.p-faq__a-text {
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #4a4237;
+}
+
+.p-cta {
+  position: relative;
+  padding-block: clamp(5rem, 3.65px + 20.36vw, 10rem);
+  padding-inline: clamp(1.25rem, -17.3px + 7.46vw, 2.5rem);
+  background: #2d2822;
+  color: #faf4ea;
+  overflow: hidden;
+}
+
+.p-cta__blob {
+  position: absolute;
+  right: -32%;
+  top: -30%;
+  width: clamp(300px, 70vw, 700px);
+  height: clamp(300px, 70vw, 700px);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #e87a52 0%, transparent 62%);
+  opacity: 0.5;
+  visibility: hidden;
+  pointer-events: none;
+  filter: blur(12px);
+}
+@media (min-width: 500px) {
+  .p-cta__blob {
+    right: -26%;
+    top: -33%;
+  }
+}
+@media (min-width: 768px) {
+  .p-cta__blob {
+    width: clamp(300px, 70vw, 580px);
+    height: clamp(300px, 70vw, 580px);
+  }
+}
+@media (min-width: 1000px) {
+  .p-cta__blob {
+    right: -12%;
+  }
+}
+@media (min-width: 1200px) {
+  .p-cta__blob {
+    width: clamp(300px, 70vw, 700px);
+    height: clamp(300px, 70vw, 700px);
+    top: -62%;
+  }
+}
+
+.p-cta__inner {
+  max-width: 62.5rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.p-cta__eyebrow {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  color: #f5b89a;
+  letter-spacing: 0.3em;
+  margin-bottom: 1.75rem;
+}
+
+.p-cta__title {
+  font-family: "Zen Old Mincho", "Shippori Mincho", serif;
+  font-size: clamp(1.75rem, 6vw, 5rem);
+  font-weight: 600;
+  margin: 0 0 2rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #faf4ea;
+}
+
+.p-cta__title-accent {
+  color: #f5b89a;
+}
+
+.p-cta__lead {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.125rem;
+  line-height: 1.9;
+  color: rgba(250, 244, 234, 0.75);
+  margin: 0 0 3rem;
+  max-width: 38.75rem;
+}
+
+.p-cta__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+@media (min-width: 500px) {
+  .p-cta__actions {
+    align-items: flex-start;
+  }
+}
+@media (min-width: 1000px) {
+  .p-cta__actions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.p-cta__note {
+  font-family: "Shippori Mincho", "Zen Old Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 0.875rem;
+  color: rgba(250, 244, 234, 0.75);
+  letter-spacing: 0.05em;
+  margin-left: 0.5rem;
+}
